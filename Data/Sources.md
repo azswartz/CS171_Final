@@ -11,3 +11,7 @@
   - Link: https://www.senate.gov/legislative/nominations/SupremeCourtNominations1789present.htm
   - Data collected 11/7/20
   - Contains the results of every hearing to appoint (or reject) a justice who has been officially nominated.
+- Supreme Court term data:
+  - Link: https://www.supremecourt.gov/about/members_text.aspx
+  - Data collected 11/7/20
+  - Contains the term dates of every Supreme Court Justice, along with President who appointed them, state they are from, and type of justice (chief or associate)
