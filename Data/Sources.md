@@ -7,3 +7,7 @@
 - Party Control Data
   - Senate: https://www.cop.senate.gov/history/partydiv.htm
   - President: https://www.theguardian.com/news/datablog/2012/oct/15/us-presidents-listed
+- Senate hearings for the appointment of Supreme Court justices:
+  - Link: https://www.senate.gov/legislative/nominations/SupremeCourtNominations1789present.htm
+  - Data collected 11/7/20
+  - Contains the results of every hearing to appoint (or reject) a justice who has been officially nominated.
