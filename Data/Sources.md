@@ -21,3 +21,5 @@
   - Link: https://worldpopulationreview.com/states
   - Useful to look at representation per Congress seat
   - Populations in years 2010, 2018, and 2020 (in addition to density and percent of total US population)
+- Number of representatives per State:
+  - Link: https://worldpopulationreview.com/state-rankings/number-of-representatives-by-state
