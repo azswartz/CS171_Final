@@ -15,3 +15,7 @@
   - Link: https://www.supremecourt.gov/about/members_text.aspx
   - Data collected 11/7/20
   - Contains the term dates of every Supreme Court Justice, along with President who appointed them, state they are from, and type of justice (chief or associate)
+- State population (and some other demographic data):
+  - Link: https://worldpopulationreview.com/states
+  - Useful to look at representation per Congress seat
+  - Populations in years 2010, 2018, and 2020 (in addition to density and percent of total US population)
