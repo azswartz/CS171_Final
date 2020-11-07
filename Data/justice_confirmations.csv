@@ -1,0 +1,165 @@
+,president,nominee,replace,nomination_date,result,hearing_date,vote_yes,vote_no,voice,tally_number,president_fn,president_ln,nominee_ln,nominee_fn
+0,"Trump, Donald","Barrett, Amy Coney",Ginsburg,"September 29, 2020",C,26-Oct-20,52,48,0,224,Donald,Trump,Barrett,Amy Coney
+1,"Trump, Donald","Kavanaugh, Brett",Kennedy,"July 10, 2018",C,6-Oct-18,50,48,0,223,Donald,Trump,Kavanaugh,Brett
+2,"Trump, Donald","Gorsuch, Neil M.",Scalia,"February 1, 2017",C,7-Apr-17,54,45,0,111,Donald,Trump,Gorsuch,Neil M.
+3,"Obama, Barack","Garland, Merrick B.",Scalia,"March 16, 2016",N,,,,0,,Barack,Obama,Garland,Merrick B.
+4,"Obama, Barack","Kagan, Elena",Stevens,"May 10, 2010",C,5-Aug-10,63,37,0,229,Barack,Obama,Kagan,Elena
+5,"Obama, Barack","Sotomayor, Sonia",Souter,"June 1, 2009",C,6-Aug-09,68,31,0,262,Barack,Obama,Sotomayor,Sonia
+6,"Bush, GeorgeW.","Alito, Samuel A., Jr.",O'Connor,"November 10, 2005",C,31-Jan-06,58,42,0,2,GeorgeW.,Bush,Alito,Samuel A.
+7,"Bush, GeorgeW.","Miers, Harriet",O'Connor,"October 7, 2005",W,28-Oct-05,,,0,,GeorgeW.,Bush,Miers,Harriet
+8,"Bush, GeorgeW.","Roberts, John G., Jr.",Rehnquist,"September 6, 2005",C,29-Sep-05,78,22,0,245,GeorgeW.,Bush,Roberts,John G.
+9,"Bush, GeorgeW.","Roberts, John G., Jr.",O'Connor,"July 29, 2005",W,6-Sep-05,,,0,,GeorgeW.,Bush,Roberts,John G.
+10,"Clinton, Bill","Breyer, Stephen G.",Blackmun,"May 17, 1994",C,29-Jul-94,87,9,0,242,Bill,Clinton,Breyer,Stephen G.
+11,"Clinton, Bill","Ginsburg, Ruth Bader",White,"June 22, 1993",C,3-Aug-93,96,3,0,232,Bill,Clinton,Ginsburg,Ruth Bader
+12,"Bush, GeorgeH.W.","Thomas, Clarence",Marshall,"July 8, 1991",C,15-Oct-91,52,48,0,220,GeorgeH.W.,Bush,Thomas,Clarence
+13,"Bush, GeorgeH.W.","Souter, David H.",Brennan,"July 25, 1990",C,2-Oct-90,90,9,0,259,GeorgeH.W.,Bush,Souter,David H.
+14,"Reagan, Ronald","Kennedy, Anthony M.",Powell,"November 30, 1987",C,3-Feb-88,97,0,0,16,Ronald,Reagan,Kennedy,Anthony M.
+15,"Reagan, Ronald","Bork, Robert H.",Powell,"July 7, 1987",R,23-Oct-87,42,58,0,348,Ronald,Reagan,Bork,Robert H.
+16,"Reagan, Ronald","Scalia, Antonin",Rehnquist,"June 24, 1986",C,17-Sep-86,98,0,0,267,Ronald,Reagan,Scalia,Antonin
+17,"Reagan, Ronald","Rehnquist, William H.",Burger,"June 20, 1986",C,17-Sep-86,65,33,0,266,Ronald,Reagan,Rehnquist,William H.
+18,"Reagan, Ronald","O'Connor, Sandra Day",Stewart,"August 19, 1981",C,21-Sep-81,99,0,0,274,Ronald,Reagan,O'Connor,Sandra Day
+19,"Ford, Gerald","Stevens, John Paul",Douglas,"November 28, 1975",C,17-Dec-75,98,0,0,603,Gerald,Ford,Stevens,John Paul
+20,"Nixon, Richard","Rehnquist, William H.",Harlan,"October 22, 1971",C,10-Dec-71,68,26,0,450,Richard,Nixon,Rehnquist,William H.
+21,"Nixon, Richard","Powell, Lewis F., Jr.",Black,"October 22, 1971",C,6-Dec-71,89,1,0,439,Richard,Nixon,Powell,Lewis F.
+22,"Nixon, Richard","Blackmun, Harry",Fortas,"April 15, 1970",C,12-May-70,94,0,0,143,Richard,Nixon,Blackmun,Harry
+23,"Nixon, Richard","Carswell, G. Harrold",Fortas,"January 19, 1970",R,8-Apr-70,45,51,0,122,Richard,Nixon,Carswell,G. Harrold
+24,"Nixon, Richard","Haynsworth, Clement, Jr.",Fortas,"August 21, 1969",R,21-Nov-69,45,55,0,154,Richard,Nixon,Haynsworth,Clement
+25,"Nixon, Richard","Burger, Warren 3",Warren,"May 23, 1969",C,9-Jun-69,74,3,0,35,Richard,Nixon,Burger,Warren 3
+26,"Johnson, Lyndon","Thornberry, Homer",Fortas,"June 26, 1968",W,4-Oct-68,,,0,,Lyndon,Johnson,Thornberry,Homer
+27,"Johnson, Lyndon","Fortas, Abe 4",Warren,"June 26, 1968",W,4-Oct-68,,,0,,Lyndon,Johnson,Fortas,Abe 4
+28,"Johnson, Lyndon","Marshall, Thurgood",Clark,"June 13, 1967",C,30-Aug-67,69,11,0,240,Lyndon,Johnson,Marshall,Thurgood
+29,"Johnson, Lyndon","Fortas, Abe",Goldberg,"July 28, 1965",C,11-Aug-65,,,1,,Lyndon,Johnson,Fortas,Abe
+30,"Kennedy, John","Goldberg, Arthur",Frankfurter,"August 31, 1962",C,25-Sep-62,,,1,,John,Kennedy,Goldberg,Arthur
+31,"Kennedy, John","White, Byron",Whittaker,"April 3, 1962",C,11-Apr-62,,,1,,John,Kennedy,White,Byron
+32,"Eisenhower, Dwight","Stewart, Potter",Burton,"January 17, 1959",C,5-May-59,70,17,0,,Dwight,Eisenhower,Stewart,Potter
+33,"Eisenhower, Dwight","Whittaker, Charles",Reed,"March 2, 1957",C,19-Mar-57,,,1,,Dwight,Eisenhower,Whittaker,Charles
+34,"Eisenhower, Dwight","Brennan, William, Jr.",Minton,"January 14, 1957",C,19-Mar-57,,,1,,Dwight,Eisenhower,Brennan,William
+35,"Eisenhower, Dwight","Harlan, John",Jackson,"January 10, 1955",C,16-Mar-55,71,11,0,,Dwight,Eisenhower,Harlan,John
+36,"Eisenhower, Dwight","Harlan, John",Jackson,"November 9, 1954",N,,,,0,,Dwight,Eisenhower,Harlan,John
+37,"Eisenhower, Dwight","Warren, Earl",Vinson,"January 11, 1954",C,1-Mar-54,,,1,,Dwight,Eisenhower,Warren,Earl
+38,"Truman, Harry","Minton, Sherman",Rutledge,"September 15, 1949",C,4-Oct-49,48,16,0,,Harry,Truman,Minton,Sherman
+39,"Truman, Harry","Clark, Tom",Murphy,"August 2, 1949",C,18-Aug-49,73,8,0,,Harry,Truman,Clark,Tom
+40,"Truman, Harry","Vinson, Fred",Stone,"June 6, 1946",C,20-Jun-46,,,1,,Harry,Truman,Vinson,Fred
+41,"Truman, Harry","Burton, Harold",Roberts,"September 18, 1945",C,19-Sep-45,,,1,,Harry,Truman,Burton,Harold
+42,"Roosevelt, Franklin","Rutledge, Wiley",Byrnes,"January 11, 1943",C,8-Feb-43,,,1,,Franklin,Roosevelt,Rutledge,Wiley
+43,"Roosevelt, Franklin","Jackson, Robert",Stone,"June 12, 1941",C,7-Jul-41,,,1,,Franklin,Roosevelt,Jackson,Robert
+44,"Roosevelt, Franklin","Byrnes, James",McReynolds,"June 12, 1941",C,12-Jun-41,,,1,,Franklin,Roosevelt,Byrnes,James
+45,"Roosevelt, Franklin","Stone, Harlan",Hughes,"June 12, 1941",C,27-Jun-41,,,1,,Franklin,Roosevelt,Stone,Harlan
+46,"Roosevelt, Franklin","Murphy, Frank",Butler,"January 4, 1940",C,16-Jan-40,,,1,,Franklin,Roosevelt,Murphy,Frank
+47,"Roosevelt, Franklin","Douglas, William",Brandeis,"March 20, 1939",C,4-Apr-39,62,4,0,,Franklin,Roosevelt,Douglas,William
+48,"Roosevelt, Franklin","Frankfurter, Felix",Cardozo,"January 5, 1939",C,17-Jan-39,,,1,,Franklin,Roosevelt,Frankfurter,Felix
+49,"Roosevelt, Franklin","Reed, Stanley",Sutherland,"January 15, 1938",C,25-Jan-38,,,1,,Franklin,Roosevelt,Reed,Stanley
+50,"Roosevelt, Franklin","Black, Hugo",Van Devanter,"August 12, 1937",C,17-Aug-37,63,16,0,,Franklin,Roosevelt,Black,Hugo
+51,"Hoover, Herbert","Cardozo, Benjamin",Holmes,"February 15, 1932",C,24-Feb-32,,,1,,Herbert,Hoover,Cardozo,Benjamin
+52,"Hoover, Herbert","Roberts, Owen",Sanford,"May 9, 1930",C,20-May-30,,,1,,Herbert,Hoover,Roberts,Owen
+53,"Hoover, Herbert","Parker, John",Sanford,"March 21, 1930",R,7-May-30,39,41,0,,Herbert,Hoover,Parker,John
+54,"Hoover, Herbert","Hughes, Charles",Taft,"February 3, 1930",C,13-Feb-30,52,26,0,,Herbert,Hoover,Hughes,Charles
+55,"Coolidge, Calvin","Stone, Harlan",McKenna,"January 5, 1925",C,5-Feb-25,71,6,0,,Calvin,Coolidge,Stone,Harlan
+56,"Harding, Warren","Sanford, Edward",Pitney,"January 24, 1923",C,29-Jan-23,,,1,,Warren,Harding,Sanford,Edward
+57,"Harding, Warren","Butler, Pierce",Day,"December 5, 1922",C,21-Dec-22,61,8,0,,Warren,Harding,Butler,Pierce
+58,"Harding, Warren","Butler, Pierce",Day,"November 21, 1922",N,,,,0,,Warren,Harding,Butler,Pierce
+59,"Harding, Warren","Sutherland, George",Clarke,"September 5, 1922",C,5-Sep-22,,,1,,Warren,Harding,Sutherland,George
+60,"Harding, Warren","Taft, William",White,"June 30, 1921",C,30-Jun-21,60,4,0,,Warren,Harding,Taft,William
+61,"Wilson, Woodrow","Clarke, John",Hughes,"July 14, 1916",C,24-Jul-16,,,1,,Woodrow,Wilson,Clarke,John
+62,"Wilson, Woodrow","Brandeis, Louis",Lamar,"January 28, 1916",C,1-Jun-16,47,22,0,,Woodrow,Wilson,Brandeis,Louis
+63,"Wilson, Woodrow","McReynolds, James",Lurton,"August 19, 1914",C,29-Aug-14,44,6,0,,Woodrow,Wilson,McReynolds,James
+64,"Taft, William","Pitney, Mahlon",Harlan,"February 19, 1912",C,13-Mar-12,50,26,0,,William,Taft,Pitney,Mahlon
+65,"Taft, William","Lamar, Joseph",Moody,"December 12, 1910",C,15-Dec-10,,,1,,William,Taft,Lamar,Joseph
+66,"Taft, William","Devanter, Willis Van",White,"December 12, 1910",C,15-Dec-10,,,1,,William,Taft,Devanter,Willis Van
+67,"Taft, William","White, Edward",Fuller,"December 12, 1910",C,12-Dec-10,,,1,,William,Taft,White,Edward
+68,"Taft, William","Hughes, Charles",Brewer,"April 25, 1910",C,2-May-10,,,1,,William,Taft,Hughes,Charles
+69,"Taft, William","Lurton, Horace",Peckham,"December 13, 1909",C,20-Dec-09,,,1,,William,Taft,Lurton,Horace
+70,"Roosevelt, Theodore","Moody, William",Brown,"December 3, 1906",C,12-Dec-06,,,1,,Theodore,Roosevelt,Moody,William
+71,"Roosevelt, Theodore","Day, William",Shiras,"February 19, 1903",C,23-Feb-03,,,1,,Theodore,Roosevelt,Day,William
+72,"Roosevelt, Theodore","Holmes, Oliver",Gray,"December 2, 1902",C,4-Dec-02,,,1,,Theodore,Roosevelt,Holmes,Oliver
+73,"McKinley, William","McKenna, Joseph",Field,"December 16, 1897",C,"January 21, 1898",,,1,,William,McKinley,McKenna,Joseph
+74,"Cleveland, Grover","Peckham, Rufus",Jackson,"December 3, 1895",C,"December 9, 1895",,,1,,Grover,Cleveland,Peckham,Rufus
+75,"Cleveland, Grover","White, Edward",Blatchford,"February 19, 1894",C,"February 19, 1894",,,1,,Grover,Cleveland,White,Edward
+76,"Cleveland, Grover","Peckham, Wheeler",Blatchford,"January 22, 1894",R,"February 16, 1894",32,41,0,,Grover,Cleveland,Peckham,Wheeler
+77,"Cleveland, Grover","Hornblower, William",Blatchford,"December 5, 1893",R,"January 15, 1894",24,30,0,,Grover,Cleveland,Hornblower,William
+78,"Cleveland, Grover","Hornblower, William",Blatchford,"September 19, 1893",N,,,,0,,Grover,Cleveland,Hornblower,William
+79,"Benjamin, Harrison","Jackson, Howell",Lamar,"February 2, 1893",C,"February 18, 1893",,,1,,Harrison,Benjamin,Jackson,Howell
+80,"Benjamin, Harrison","Shiras, George, Jr.",Bradley,"July 19, 1892",C,"July 26, 1892",,,1,,Harrison,Benjamin,Shiras,George
+81,"Benjamin, Harrison","Brown, Henry",Miller,"December 23, 1890",C,"December 29, 1890",,,1,,Harrison,Benjamin,Brown,Henry
+82,"Benjamin, Harrison","Brewer, David",Matthews,"December 4, 1889",C,"December 18, 1889",53,11,0,,Harrison,Benjamin,Brewer,David
+83,"Cleveland, Grover","Fuller, Melville",Waite,"April  30, 1888",C,"July 20, 1888",41,20,0,,Grover,Cleveland,Fuller,Melville
+84,"Cleveland, Grover","Lamar, Lucius",Woods,"December 6, 1887",C,"January 16, 1888",32,28,0,,Grover,Cleveland,Lamar,Lucius
+85,"Arthur, Chester","Blatchford, Samuel",Hunt,"March 13, 1882",C,"March 22, 1882",,,1,,Chester,Arthur,Blatchford,Samuel
+86,"Arthur, Chester","Conkling, Roscoe",Hunt,"February 24, 1882",D,"March 2, 1882",39,12,0,,Chester,Arthur,Conkling,Roscoe
+87,"Arthur, Chester","Gray, Horace",Clifford,"December 19, 1881",C,"December 20, 1881",51,5,0,,Chester,Arthur,Gray,Horace
+88,"Garfield, James","Stanley, Matthews",Swayne,"March 14, 1881",C,"May 12, 1881",24,23,0,,James,Garfield,Stanley,Matthews
+89,"Hayes, Rutherford","Matthews, Stanley",Swayne,"January 26, 1881",N,,,,0,,Rutherford,Hayes,Matthews,Stanley
+90,"Hayes, Rutherford","Woods, William",Strong,"December 15, 1880",C,"December 21, 1880",39,8,0,,Rutherford,Hayes,Woods,William
+91,"Hayes, Rutherford","Harlan, John",Davis,"October 16, 1877",C,"November 29, 1877",,,1,,Rutherford,Hayes,Harlan,John
+92,"Grant, Ulysses","Waite, Morrison",Chase,"January 19, 1874",C,"January 21, 1874",63,0,0,,Ulysses,Grant,Waite,Morrison
+93,"Grant, Ulysses","Cushing, Caleb",Chase,"January 9, 1874",W,"January 13, 1874",,,0,,Ulysses,Grant,Cushing,Caleb
+94,"Grant, Ulysses","Williams, George",Chase,"December 1, 1873",W,"January 8, 1874",,,0,,Ulysses,Grant,Williams,George
+95,"Grant, Ulysses","Hunt, Ward",Nelson,"December 3, 1872",C,"December 11, 1872",,,1,,Ulysses,Grant,Hunt,Ward
+96,"Grant, Ulysses","Bradley, Joseph",(new seat),"February 7, 1870",C,"March 21, 1870",46,9,0,,Ulysses,Grant,Bradley,Joseph
+97,"Grant, Ulysses","Strong, William",Grier,"February 7, 1870",C,"February 18, 1870",,,0,,Ulysses,Grant,Strong,William
+98,"Grant, Ulysses","Stanton, Edwin",Grier,"December 20, 1869",C,"December 20, 1869",46,11,0,,Ulysses,Grant,Stanton,Edwin
+99,"Grant, Ulysses","Hoar, Ebenezer",(new seat),"December 14, 1869",R,"February 3, 1870",24,33,0,,Ulysses,Grant,Hoar,Ebenezer
+100,"Johnson, Andrew","Stanbery, Henry",Catron,"April  16, 1866",N,,,,0,,Andrew,Johnson,Stanbery,Henry
+101,"Lincoln, Abraham","Chase, Salmon",Taney,"December 6, 1864",C,"December 6, 1864",,,1,,Abraham,Lincoln,Chase,Salmon
+102,"Lincoln, Abraham","Field, Stephen",(new seat),"March 6, 1863",C,"March 10, 1863",,,1,,Abraham,Lincoln,Field,Stephen
+103,"Lincoln, Abraham","Davis, David",Campbell,"December 1, 1862",C,"December 8, 1862",,,1,,Abraham,Lincoln,Davis,David
+104,"Lincoln, Abraham","Miller, Samuel",Daniel,"July 16, 1862",C,"July 16, 1862",,,1,,Abraham,Lincoln,Miller,Samuel
+105,"Lincoln, Abraham","Swayne, Noah",McLean,"January 21, 1862",C,"January 24, 1862",38,1,0,,Abraham,Lincoln,Swayne,Noah
+106,"Buchanan, James","Black, Jeremiah",Daniel,"February 5, 1861",R,"February 21, 1861",25,26,0,,James,Buchanan,Black,Jeremiah
+107,"Buchanan, James","Clifford, Nathan",Curtis,"December 9, 1857",C,"January 12, 1858",26,23,0,,James,Buchanan,Clifford,Nathan
+108,"Pierce, Franklin","Campbell, John",McKinley,"March 21, 1853",C,"March 22, 1853",,,1,,Franklin,Pierce,Campbell,John
+109,"Fillmore, Millard","Micou, William",McKinley,"February 14, 1853",N,,,,0,,Millard,Fillmore,Micou,William
+110,"Fillmore, Millard","Badger, Geoge",McKinley,"January 3, 1853",W,"February 14, 1853",,,0,,Millard,Fillmore,Badger,Geoge
+111,"Fillmore, Millard","Bradford, Edward",McKinley,"August 16, 1852",N,,,,0,,Millard,Fillmore,Bradford,Edward
+112,"Fillmore, Millard","Curtis, Benjamin",Woodbury,"December 11, 1851",C,"December 20, 1851",,,1,,Millard,Fillmore,Curtis,Benjamin
+113,"Polk, James","Grier, Robert",Baldwin,"August 3, 1846",C,"August 4, 1846",,,1,,James,Polk,Grier,Robert
+114,"Polk, James","Woodbury, Levi",Story,"December 23, 1845",C,"January 3, 1846",,,1,,James,Polk,Woodbury,Levi
+115,"Polk, James","Woodward, George",Baldwin,"December 23, 1845",R,"January 22, 1846",20,29,0,,James,Polk,Woodward,George
+116,"Tyler, John","Read, John",Baldwin,"February 7, 1845",N,,,,0,,John,Tyler,Read,John
+117,"Tyler, John","Nelson, Samuel",Thompson,"February 4, 1845",C,"February 14, 1845",,,1,,John,Tyler,Nelson,Samuel
+118,"Tyler, John","Walworth, Reuben",Thompson,"December 4, 1844",W,"February 4, 1845",,,0,,John,Tyler,Walworth,Reuben
+119,"Tyler, John","King, Edward",Baldwin,"December 4, 1844",W,"February 7, 1845",,,0,,John,Tyler,King,Edward
+120,"Tyler, John","Walworth, Reuben",Thompson,"June 17, 1844",N,"June 17, 1844",,,0,,John,Tyler,Walworth,Reuben
+121,"Tyler, John","Spencer, John",Thompson,"June 17, 1844",W,"June 17, 1844",,,0,,John,Tyler,Spencer,John
+122,"Tyler, John","King, Edward",Baldwin,"June 5, 1844",P,"June 15, 1844",29,18,0,,John,Tyler,King,Edward
+123,"Tyler, John","Walworth, Reuben",Thompson,"March 13, 1844",W,"June 17, 1844",27,20,0,,John,Tyler,Walworth,Reuben
+124,"Tyler, John","Spencer, John",Thompson,"January 8, 1844",R,"January 31, 1844",21,26,0,,John,Tyler,Spencer,John
+125,"VanBuren, Martin","Daniel, Peter",Barbour,"February 26, 1841",C,"March 2, 1841",25,5,0,,Martin,VanBuren,Daniel,Peter
+126,"VanBuren, Martin","McKinley, John",(new seat),"September 18, 1837",C,"September 25, 1837",,,1,,Martin,VanBuren,McKinley,John
+127,"Jackson, Andrew","Catron, John",(new seat),"March 3, 1837",C,"March 8, 1837",28,15,0,,Andrew,Jackson,Catron,John
+128,"Jackson, Andrew","Smith, William",(new seat),"March 3, 1837",D,"March 8, 1837",23,18,0,,Andrew,Jackson,Smith,William
+129,"Jackson, Andrew","Barbour, Philip",Duvall,"December 28, 1835",C,"March 15, 1836",30,11,0,,Andrew,Jackson,Barbour,Philip
+130,"Jackson, Andrew","Taney, Roger",Marshall,"December 28, 1835",C,"March 15, 1836",29,15,0,,Andrew,Jackson,Taney,Roger
+131,"Jackson, Andrew","Taney, Roger",Duvall,"January 15, 1835",P,"March 3, 1835",24,21,0,,Andrew,Jackson,Taney,Roger
+132,"Jackson, Andrew","Wayne, James",Johnson,"January 6, 1835",C,"January 9, 1835",,,1,,Andrew,Jackson,Wayne,James
+133,"Jackson, Andrew","Baldwin, Henry",Washington,"January 4, 1830",C,"January 6, 1830",41,2,0,,Andrew,Jackson,Baldwin,Henry
+134,"Jackson, Andrew","McLean, John",Trimble,"March 6, 1829",C,"March 7, 1829",,,1,,Andrew,Jackson,McLean,John
+135,"Adams, JohnQuincy","Crittenden, John",Trimble,"December 17, 1828",P,"February 12, 1829",23,17,0,,JohnQuincy,Adams,Crittenden,John
+136,"Adams, JohnQuincy","Trimble, Robert",Todd,"April  11, 1826",C,"May 9, 1826",27,5,0,,JohnQuincy,Adams,Trimble,Robert
+137,"Monroe, James","Thompson, Smith",Livingston,"December 5, 1823",C,"December 9, 1823",,,1,,James,Monroe,Thompson,Smith
+138,"Madison, James","Duvall, Gabriel",Chase,"November 15, 1811",C,"November 18, 1811",,,1,,James,Madison,Duvall,Gabriel
+139,"Madison, James","Story, Joseph",Cushing,"November 15, 1811",C,"November 18, 1811",,,1,,James,Madison,Story,Joseph
+140,"Madison, James","Adams, John Quincy",Cushing,"February 21, 1811",D,"February 22, 1811",,,0,,James,Madison,Adams,John Quincy
+141,"Madison, James","Wolcott, Alexander",Cushing,"February 4, 1811",R,"February 13, 1811",9,24,0,,James,Madison,Wolcott,Alexander
+142,"Madison, James","Lincoln, Levi",Cushing,"January 2, 1811",D,"January 3, 1811",,,0,,James,Madison,Lincoln,Levi
+143,"Jefferson, Thomas","Todd, Thomas",(new seat),"February 28, 1807",C,"March 2, 1807",,,1,,Thomas,Jefferson,Todd,Thomas
+144,"Jefferson, Thomas","Livingston, H. Brockholst",Paterson,"December 13, 1806",C,"December 17, 1806",,,1,,Thomas,Jefferson,Livingston,H. Brockholst
+145,"Jefferson, Thomas","Johnson, William",Moore,"March 22, 1804",C,"March 24, 1804",,,1,,Thomas,Jefferson,Johnson,William
+146,"Adams, John","Marshall, John",Ellsworth,"January 20, 1801",C,"January 27, 1801",,,1,,John,Adams,Marshall,John
+147,"Adams, John","Jay, John",Ellsworth,"December 18, 1800",D,"December 19, 1800",,,0,,John,Adams,Jay,John
+148,"Adams, John","Moore, Alfred",Iredell,"December 4, 1799",C,"December 10, 1799",,,1,,John,Adams,Moore,Alfred
+149,"Adams, John","Washington, Bushrod",Wilson,"December 19, 1798",C,"December 20, 1798",,,1,,John,Adams,Washington,Bushrod
+150,"Washington, George","Ellsworth, Oliver",Jay,"March 3, 1796",C,"March 4, 1796",21,1,0,,George,Washington,Ellsworth,Oliver
+151,"Washington, George","Chase, Samuel",Blair,"January 26, 1796",C,"January 27, 1796",,,1,,George,Washington,Chase,Samuel
+152,"Washington, George","Cushing, William",Jay,"January 26, 1796",D,"January 27, 1796",,,0,,George,Washington,Cushing,William
+153,"Washington, George","Rutledge, John",Jay,"December 10, 1795",R,"December 15, 1795",10,14,0,,George,Washington,Rutledge,John
+154,"Washington, George","Paterson, William",Johnson,"March 4, 1793",C,"March 4, 1793",,,1,,George,Washington,Paterson,William
+155,"Washington, George","Paterson, William",Johnson,"February 27, 1793",W,"February 28, 1793",,,0,,George,Washington,Paterson,William
+156,"Washington, George","Johnson, Thomas",Rutledge,"October 31, 1791",C,"November 7, 1791",,,1,,George,Washington,Johnson,Thomas
+157,"Washington, George","Iredell, James",Harrison,"February 8, 1790",C,"February 10, 1790",,,1,,George,Washington,Iredell,James
+158,"Washington, George","Blair, John",,"September 24, 1789",C,"September 26, 1789",,,1,,George,Washington,Blair,John
+159,"Washington, George","Wilson, James",,"September 24, 1789",C,"September 26, 1789",,,1,,George,Washington,Wilson,James
+160,"Washington, George","Harrison, Robert",,"September 24, 1789",D,"September 26, 1789",,,0,,George,Washington,Harrison,Robert
+161,"Washington, George","Cushing, William",,"September 24, 1789",C,"September 26, 1789",,,1,,George,Washington,Cushing,William
+162,"Washington, George","Rutledge, John",,"September 24, 1789",C,"September 26, 1789",,,1,,George,Washington,Rutledge,John
+163,"Washington, George","Jay, John",,"September 24, 1789",C,"September 26, 1789",,,1,,George,Washington,Jay,John
