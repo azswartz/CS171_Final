@@ -1,5 +1,6 @@
 - `state_partisan_lean.csv`is from FiveThirtyEight:
   - https://github.com/fivethirtyeight/data/blob/master/partisan-lean/fivethirtyeight_partisan_lean_STATES.csv
+  - Data collected 11/5/20
 - Judicial Confirmation Data: 
   - www.congress.gov search tool. Filter on `Nominations`, `Senate Committee: Judiciary` and `Referred to Committee` for all nominations made or `Confirmed by Senate` for confirmed nominations. 
   - Go to the filters on `Congress` to determine how many nominations or confirmations occurred in each session. 
@@ -7,6 +8,7 @@
 - Party Control Data
   - Senate: https://www.cop.senate.gov/history/partydiv.htm
   - President: https://www.theguardian.com/news/datablog/2012/oct/15/us-presidents-listed
+  - Data collected 11/5/20
 - Senate hearings for the appointment of Supreme Court justices:
   - Link: https://www.senate.gov/legislative/nominations/SupremeCourtNominations1789present.htm
   - Data collected 11/7/20
