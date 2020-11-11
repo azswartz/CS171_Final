@@ -1,0 +1,51 @@
+
+body{
+    padding: 3vh 5vh 5vh 5vh;
+}
+
+h1{
+    font-size: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+
+h2{
+    font-size: 2vh;
+    text-align: center;
+}
+
+h3{
+    font-size: 3vh;
+    /*padding-top: -2vh;*/
+    padding-bottom: 2vh;
+}
+
+.centerdiv{
+    padding-top: 25VH;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.mainbody{
+    height: 80VH;
+}
+
+.backregion{
+    display: flex;
+    align-items:center;
+}
+
+.forwardregion{
+    display: flex;
+    align-items:center;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
