@@ -8,7 +8,9 @@
 
     <!-- Load CSS libraries -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="vis2.css">
+
 
     <!-- GOOGLE FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
@@ -18,15 +20,28 @@
 
 <div class="container-fluid">
     <div class="row">
-        <h3>Democrats must therefore win much more than 50% to overcome this bias to win control of the Senate.</h3>
+        <h3>Democrats must therefore work much harder to win even a small majority.</h3>
     </div>
     <div class="row mainbody">
         <div class="col-auto backregion">
             <a href="../Vis1/state_bias.html" id="beginbutton">Back</a>
         </div>
         <div class="col">
-            <div class="content">
-                Visualization Here
+            <div class="row">
+                <label for="national-slider">Suppose the
+                    <div id="national-winner" class="box">Democrats</div>
+                    win the national popular vote by <div id="national-count" class="box">0%</div>:</label>
+            </div>
+            <div class="row center" style="padding-bottom: 10px">
+                <div class="caption">Favoring Democrats</div>
+                <input type="range" min="-10" max="10" value="0" id="national-slider" oninput="sliderUpdate()">
+                <div class="caption">Favoring Republicans</div>
+            </div>
+            <div class="row">
+                <label>
+                Then the <div id="senate-winner" class="box"> .. </div> control the Senate with
+               a <div id="senate-count" class="box"> .. </div> seat majority
+                    <div id="senate-seats" class="box"></div>.</label>
             </div>
         </div>
         <div class="col-auto forwardregion">
@@ -46,5 +61,10 @@
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
 <!-- own js files -->
+
+<script src="../main.js"></script>
+<script src="vis2.js"></script>
+<script src="senate-balance.js"></script>
+
 </body>
 </html>

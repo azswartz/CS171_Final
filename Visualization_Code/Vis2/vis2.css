@@ -1,0 +1,22 @@
+#national-slider{
+    width: 50%;
+}
+
+.center{
+    display: flex;
+    justify-content:center;
+}
+
+.box{
+    display: inline;
+    background-color: AntiqueWhite;
+    font-weight: bold;
+}
+
+
+.caption{
+    display: inline;
+    font-size: small;
+    padding-left: 10px;
+    padding-right: 10px;
+}

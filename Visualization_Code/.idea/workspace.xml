@@ -29,11 +29,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1kA3b5VD8vajGABEmbPWZceLtxw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,17 +48,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Pages\Overview" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Visualization_Code" />
       <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Pages\Overview\Vis5" />
       <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Pages\Overview\Vis4" />
       <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Pages\Overview\Vis3" />
       <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Pages\Overview\Vis2" />
-      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Pages\Overview\Vis1" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\Pages\Overview" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,6 +71,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605129636741</updated>
       <workItem from="1605129637881" duration="4487000" />
+      <workItem from="1605216253267" duration="1869000" />
+      <workItem from="1605300065728" duration="6399000" />
     </task>
     <servers />
   </component>
@@ -84,5 +89,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="303" y="2" width="672" height="678" key="search.everywhere.popup" timestamp="1605302926464">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="2" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1605302926464" />
   </component>
 </project>
