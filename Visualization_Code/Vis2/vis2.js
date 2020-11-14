@@ -18,10 +18,20 @@ function sliderUpdate(){
     senate_balance.wrangleData(national_split);
 }
 
+let files = [
+    d3.csv("../data/state_partisan_lean.csv"),
+    d3.csv("../data/states_pop_2020.csv"),
+];
 
-d3.csv("../data/state_partisan_lean.csv")
+Promise.all(files)
     .then(data => {
-        let states = data.map(d => {
+        let statepops = {};
+
+        data[1].forEach(d => {
+            statepops[state_to_abbrev[d.State]] = Number(d.Pop);
+        })
+
+        let states = data[0].map(d => {
                 let lean = d[2020].split("+");
 
                 let sign = 1;
@@ -30,9 +40,12 @@ d3.csv("../data/state_partisan_lean.csv")
                 }
                 lean = sign * Number(lean[1]);
 
-                return {state: d.state, abbreviation: state_to_abbrev[d.state], lean: lean};
+                return {state: d.state, abbreviation: state_to_abbrev[d.state],
+                    lean: lean, pop: statepops[state_to_abbrev[d.state]]};
             }
         );
 
-        senate_balance = new SenateBalance("", states, 0);
+
+        states.sort((a,b) => a.lean - b.lean);
+        senate_balance = new SenateBalance("senate-vis", states, 0);
     })
