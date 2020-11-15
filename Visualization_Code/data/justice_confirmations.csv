@@ -1,77 +1,77 @@
 ,president,nominee,replace,nomination_date,result,hearing_date,vote_yes,vote_no,voice,tally_number,president_fn,president_ln,nominee_ln,nominee_fn
-0,"Trump, Donald","Barrett, Amy Coney",Ginsburg,"September 29, 2020",C,26-Oct-20,52,48,0,224,Donald,Trump,Barrett,Amy Coney
-1,"Trump, Donald","Kavanaugh, Brett",Kennedy,"July 10, 2018",C,6-Oct-18,50,48,0,223,Donald,Trump,Kavanaugh,Brett
-2,"Trump, Donald","Gorsuch, Neil M.",Scalia,"February 1, 2017",C,7-Apr-17,54,45,0,111,Donald,Trump,Gorsuch,Neil M.
+0,"Trump, Donald","Barrett, Amy Coney",Ginsburg,"September 29, 2020",C,26-Oct-2020,52,48,0,224,Donald,Trump,Barrett,Amy Coney
+1,"Trump, Donald","Kavanaugh, Brett",Kennedy,"July 10, 2018",C,6-Oct-2018,50,48,0,223,Donald,Trump,Kavanaugh,Brett
+2,"Trump, Donald","Gorsuch, Neil M.",Scalia,"February 1, 2017",C,7-Apr-2017,54,45,0,111,Donald,Trump,Gorsuch,Neil M.
 3,"Obama, Barack","Garland, Merrick B.",Scalia,"March 16, 2016",N,,,,0,,Barack,Obama,Garland,Merrick B.
-4,"Obama, Barack","Kagan, Elena",Stevens,"May 10, 2010",C,5-Aug-10,63,37,0,229,Barack,Obama,Kagan,Elena
-5,"Obama, Barack","Sotomayor, Sonia",Souter,"June 1, 2009",C,6-Aug-09,68,31,0,262,Barack,Obama,Sotomayor,Sonia
-6,"Bush, GeorgeW.","Alito, Samuel A., Jr.",O'Connor,"November 10, 2005",C,31-Jan-06,58,42,0,2,GeorgeW.,Bush,Alito,Samuel A.
-7,"Bush, GeorgeW.","Miers, Harriet",O'Connor,"October 7, 2005",W,28-Oct-05,,,0,,GeorgeW.,Bush,Miers,Harriet
-8,"Bush, GeorgeW.","Roberts, John G., Jr.",Rehnquist,"September 6, 2005",C,29-Sep-05,78,22,0,245,GeorgeW.,Bush,Roberts,John G.
-9,"Bush, GeorgeW.","Roberts, John G., Jr.",O'Connor,"July 29, 2005",W,6-Sep-05,,,0,,GeorgeW.,Bush,Roberts,John G.
-10,"Clinton, Bill","Breyer, Stephen G.",Blackmun,"May 17, 1994",C,29-Jul-94,87,9,0,242,Bill,Clinton,Breyer,Stephen G.
-11,"Clinton, Bill","Ginsburg, Ruth Bader",White,"June 22, 1993",C,3-Aug-93,96,3,0,232,Bill,Clinton,Ginsburg,Ruth Bader
-12,"Bush, GeorgeH.W.","Thomas, Clarence",Marshall,"July 8, 1991",C,15-Oct-91,52,48,0,220,GeorgeH.W.,Bush,Thomas,Clarence
-13,"Bush, GeorgeH.W.","Souter, David H.",Brennan,"July 25, 1990",C,2-Oct-90,90,9,0,259,GeorgeH.W.,Bush,Souter,David H.
-14,"Reagan, Ronald","Kennedy, Anthony M.",Powell,"November 30, 1987",C,3-Feb-88,97,0,0,16,Ronald,Reagan,Kennedy,Anthony M.
-15,"Reagan, Ronald","Bork, Robert H.",Powell,"July 7, 1987",R,23-Oct-87,42,58,0,348,Ronald,Reagan,Bork,Robert H.
-16,"Reagan, Ronald","Scalia, Antonin",Rehnquist,"June 24, 1986",C,17-Sep-86,98,0,0,267,Ronald,Reagan,Scalia,Antonin
-17,"Reagan, Ronald","Rehnquist, William H.",Burger,"June 20, 1986",C,17-Sep-86,65,33,0,266,Ronald,Reagan,Rehnquist,William H.
-18,"Reagan, Ronald","O'Connor, Sandra Day",Stewart,"August 19, 1981",C,21-Sep-81,99,0,0,274,Ronald,Reagan,O'Connor,Sandra Day
-19,"Ford, Gerald","Stevens, John Paul",Douglas,"November 28, 1975",C,17-Dec-75,98,0,0,603,Gerald,Ford,Stevens,John Paul
-20,"Nixon, Richard","Rehnquist, William H.",Harlan,"October 22, 1971",C,10-Dec-71,68,26,0,450,Richard,Nixon,Rehnquist,William H.
-21,"Nixon, Richard","Powell, Lewis F., Jr.",Black,"October 22, 1971",C,6-Dec-71,89,1,0,439,Richard,Nixon,Powell,Lewis F.
-22,"Nixon, Richard","Blackmun, Harry",Fortas,"April 15, 1970",C,12-May-70,94,0,0,143,Richard,Nixon,Blackmun,Harry
-23,"Nixon, Richard","Carswell, G. Harrold",Fortas,"January 19, 1970",R,8-Apr-70,45,51,0,122,Richard,Nixon,Carswell,G. Harrold
-24,"Nixon, Richard","Haynsworth, Clement, Jr.",Fortas,"August 21, 1969",R,21-Nov-69,45,55,0,154,Richard,Nixon,Haynsworth,Clement
-25,"Nixon, Richard","Burger, Warren 3",Warren,"May 23, 1969",C,9-Jun-69,74,3,0,35,Richard,Nixon,Burger,Warren 3
-26,"Johnson, Lyndon","Thornberry, Homer",Fortas,"June 26, 1968",W,4-Oct-68,,,0,,Lyndon,Johnson,Thornberry,Homer
-27,"Johnson, Lyndon","Fortas, Abe 4",Warren,"June 26, 1968",W,4-Oct-68,,,0,,Lyndon,Johnson,Fortas,Abe 4
-28,"Johnson, Lyndon","Marshall, Thurgood",Clark,"June 13, 1967",C,30-Aug-67,69,11,0,240,Lyndon,Johnson,Marshall,Thurgood
-29,"Johnson, Lyndon","Fortas, Abe",Goldberg,"July 28, 1965",C,11-Aug-65,,,1,,Lyndon,Johnson,Fortas,Abe
-30,"Kennedy, John","Goldberg, Arthur",Frankfurter,"August 31, 1962",C,25-Sep-62,,,1,,John,Kennedy,Goldberg,Arthur
-31,"Kennedy, John","White, Byron",Whittaker,"April 3, 1962",C,11-Apr-62,,,1,,John,Kennedy,White,Byron
-32,"Eisenhower, Dwight","Stewart, Potter",Burton,"January 17, 1959",C,5-May-59,70,17,0,,Dwight,Eisenhower,Stewart,Potter
-33,"Eisenhower, Dwight","Whittaker, Charles",Reed,"March 2, 1957",C,19-Mar-57,,,1,,Dwight,Eisenhower,Whittaker,Charles
-34,"Eisenhower, Dwight","Brennan, William, Jr.",Minton,"January 14, 1957",C,19-Mar-57,,,1,,Dwight,Eisenhower,Brennan,William
-35,"Eisenhower, Dwight","Harlan, John",Jackson,"January 10, 1955",C,16-Mar-55,71,11,0,,Dwight,Eisenhower,Harlan,John
+4,"Obama, Barack","Kagan, Elena",Stevens,"May 10, 2010",C,5-Aug-2010,63,37,0,229,Barack,Obama,Kagan,Elena
+5,"Obama, Barack","Sotomayor, Sonia",Souter,"June 1, 2009",C,6-Aug-2009,68,31,0,262,Barack,Obama,Sotomayor,Sonia
+6,"Bush, GeorgeW.","Alito, Samuel A., Jr.",O'Connor,"November 10, 2005",C,31-Jan-2006,58,42,0,2,GeorgeW.,Bush,Alito,Samuel A.
+7,"Bush, GeorgeW.","Miers, Harriet",O'Connor,"October 7, 2005",W,28-Oct-2005,,,0,,GeorgeW.,Bush,Miers,Harriet
+8,"Bush, GeorgeW.","Roberts, John G., Jr.",Rehnquist,"September 6, 2005",C,29-Sep-2005,78,22,0,245,GeorgeW.,Bush,Roberts,John G.
+9,"Bush, GeorgeW.","Roberts, John G., Jr.",O'Connor,"July 29, 2005",W,6-Sep-2005,,,0,,GeorgeW.,Bush,Roberts,John G.
+10,"Clinton, Bill","Breyer, Stephen G.",Blackmun,"May 17, 1994",C,29-Jul-1994,87,9,0,242,Bill,Clinton,Breyer,Stephen G.
+11,"Clinton, Bill","Ginsburg, Ruth Bader",White,"June 22, 1993",C,3-Aug-1993,96,3,0,232,Bill,Clinton,Ginsburg,Ruth Bader
+12,"Bush, GeorgeH.W.","Thomas, Clarence",Marshall,"July 8, 1991",C,15-Oct-1991,52,48,0,220,GeorgeH.W.,Bush,Thomas,Clarence
+13,"Bush, GeorgeH.W.","Souter, David H.",Brennan,"July 25, 1990",C,2-Oct-1990,90,9,0,259,GeorgeH.W.,Bush,Souter,David H.
+14,"Reagan, Ronald","Kennedy, Anthony M.",Powell,"November 30, 1987",C,3-Feb-1988,97,0,0,16,Ronald,Reagan,Kennedy,Anthony M.
+15,"Reagan, Ronald","Bork, Robert H.",Powell,"July 7, 1987",R,23-Oct-1987,42,58,0,348,Ronald,Reagan,Bork,Robert H.
+16,"Reagan, Ronald","Scalia, Antonin",Rehnquist,"June 24, 1986",C,17-Sep-1986,98,0,0,267,Ronald,Reagan,Scalia,Antonin
+17,"Reagan, Ronald","Rehnquist, William H.",Burger,"June 20, 1986",C,17-Sep-1986,65,33,0,266,Ronald,Reagan,Rehnquist,William H.
+18,"Reagan, Ronald","O'Connor, Sandra Day",Stewart,"August 19, 1981",C,21-Sep-1981,99,0,0,274,Ronald,Reagan,O'Connor,Sandra Day
+19,"Ford, Gerald","Stevens, John Paul",Douglas,"November 28, 1975",C,17-Dec-1975,98,0,0,603,Gerald,Ford,Stevens,John Paul
+20,"Nixon, Richard","Rehnquist, William H.",Harlan,"October 22, 1971",C,10-Dec-1971,68,26,0,450,Richard,Nixon,Rehnquist,William H.
+21,"Nixon, Richard","Powell, Lewis F., Jr.",Black,"October 22, 1971",C,6-Dec-1971,89,1,0,439,Richard,Nixon,Powell,Lewis F.
+22,"Nixon, Richard","Blackmun, Harry",Fortas,"April 15, 1970",C,12-May-1970,94,0,0,143,Richard,Nixon,Blackmun,Harry
+23,"Nixon, Richard","Carswell, G. Harrold",Fortas,"January 19, 1970",R,8-Apr-1970,45,51,0,122,Richard,Nixon,Carswell,G. Harrold
+24,"Nixon, Richard","Haynsworth, Clement, Jr.",Fortas,"August 21, 1969",R,21-Nov-1969,45,55,0,154,Richard,Nixon,Haynsworth,Clement
+25,"Nixon, Richard","Burger, Warren 3",Warren,"May 23, 1969",C,9-Jun-1969,74,3,0,35,Richard,Nixon,Burger,Warren 3
+26,"Johnson, Lyndon","Thornberry, Homer",Fortas,"June 26, 1968",W,4-Oct-1968,,,0,,Lyndon,Johnson,Thornberry,Homer
+27,"Johnson, Lyndon","Fortas, Abe 4",Warren,"June 26, 1968",W,4-Oct-1968,,,0,,Lyndon,Johnson,Fortas,Abe 4
+28,"Johnson, Lyndon","Marshall, Thurgood",Clark,"June 13, 1967",C,30-Aug-1967,69,11,0,240,Lyndon,Johnson,Marshall,Thurgood
+29,"Johnson, Lyndon","Fortas, Abe",Goldberg,"July 28, 1965",C,11-Aug-1965,,,1,,Lyndon,Johnson,Fortas,Abe
+30,"Kennedy, John","Goldberg, Arthur",Frankfurter,"August 31, 1962",C,25-Sep-1962,,,1,,John,Kennedy,Goldberg,Arthur
+31,"Kennedy, John","White, Byron",Whittaker,"April 3, 1962",C,11-Apr-1962,,,1,,John,Kennedy,White,Byron
+32,"Eisenhower, Dwight","Stewart, Potter",Burton,"January 17, 1959",C,5-May-1959,70,17,0,,Dwight,Eisenhower,Stewart,Potter
+33,"Eisenhower, Dwight","Whittaker, Charles",Reed,"March 2, 1957",C,19-Mar-1957,,,1,,Dwight,Eisenhower,Whittaker,Charles
+34,"Eisenhower, Dwight","Brennan, William, Jr.",Minton,"January 14, 1957",C,19-Mar-1957,,,1,,Dwight,Eisenhower,Brennan,William
+35,"Eisenhower, Dwight","Harlan, John",Jackson,"January 10, 1955",C,16-Mar-1955,71,11,0,,Dwight,Eisenhower,Harlan,John
 36,"Eisenhower, Dwight","Harlan, John",Jackson,"November 9, 1954",N,,,,0,,Dwight,Eisenhower,Harlan,John
-37,"Eisenhower, Dwight","Warren, Earl",Vinson,"January 11, 1954",C,1-Mar-54,,,1,,Dwight,Eisenhower,Warren,Earl
-38,"Truman, Harry","Minton, Sherman",Rutledge,"September 15, 1949",C,4-Oct-49,48,16,0,,Harry,Truman,Minton,Sherman
-39,"Truman, Harry","Clark, Tom",Murphy,"August 2, 1949",C,18-Aug-49,73,8,0,,Harry,Truman,Clark,Tom
-40,"Truman, Harry","Vinson, Fred",Stone,"June 6, 1946",C,20-Jun-46,,,1,,Harry,Truman,Vinson,Fred
-41,"Truman, Harry","Burton, Harold",Roberts,"September 18, 1945",C,19-Sep-45,,,1,,Harry,Truman,Burton,Harold
-42,"Roosevelt, Franklin","Rutledge, Wiley",Byrnes,"January 11, 1943",C,8-Feb-43,,,1,,Franklin,Roosevelt,Rutledge,Wiley
-43,"Roosevelt, Franklin","Jackson, Robert",Stone,"June 12, 1941",C,7-Jul-41,,,1,,Franklin,Roosevelt,Jackson,Robert
-44,"Roosevelt, Franklin","Byrnes, James",McReynolds,"June 12, 1941",C,12-Jun-41,,,1,,Franklin,Roosevelt,Byrnes,James
-45,"Roosevelt, Franklin","Stone, Harlan",Hughes,"June 12, 1941",C,27-Jun-41,,,1,,Franklin,Roosevelt,Stone,Harlan
-46,"Roosevelt, Franklin","Murphy, Frank",Butler,"January 4, 1940",C,16-Jan-40,,,1,,Franklin,Roosevelt,Murphy,Frank
-47,"Roosevelt, Franklin","Douglas, William",Brandeis,"March 20, 1939",C,4-Apr-39,62,4,0,,Franklin,Roosevelt,Douglas,William
-48,"Roosevelt, Franklin","Frankfurter, Felix",Cardozo,"January 5, 1939",C,17-Jan-39,,,1,,Franklin,Roosevelt,Frankfurter,Felix
-49,"Roosevelt, Franklin","Reed, Stanley",Sutherland,"January 15, 1938",C,25-Jan-38,,,1,,Franklin,Roosevelt,Reed,Stanley
-50,"Roosevelt, Franklin","Black, Hugo",Van Devanter,"August 12, 1937",C,17-Aug-37,63,16,0,,Franklin,Roosevelt,Black,Hugo
-51,"Hoover, Herbert","Cardozo, Benjamin",Holmes,"February 15, 1932",C,24-Feb-32,,,1,,Herbert,Hoover,Cardozo,Benjamin
-52,"Hoover, Herbert","Roberts, Owen",Sanford,"May 9, 1930",C,20-May-30,,,1,,Herbert,Hoover,Roberts,Owen
-53,"Hoover, Herbert","Parker, John",Sanford,"March 21, 1930",R,7-May-30,39,41,0,,Herbert,Hoover,Parker,John
-54,"Hoover, Herbert","Hughes, Charles",Taft,"February 3, 1930",C,13-Feb-30,52,26,0,,Herbert,Hoover,Hughes,Charles
-55,"Coolidge, Calvin","Stone, Harlan",McKenna,"January 5, 1925",C,5-Feb-25,71,6,0,,Calvin,Coolidge,Stone,Harlan
-56,"Harding, Warren","Sanford, Edward",Pitney,"January 24, 1923",C,29-Jan-23,,,1,,Warren,Harding,Sanford,Edward
-57,"Harding, Warren","Butler, Pierce",Day,"December 5, 1922",C,21-Dec-22,61,8,0,,Warren,Harding,Butler,Pierce
+37,"Eisenhower, Dwight","Warren, Earl",Vinson,"January 11, 1954",C,1-Mar-1954,,,1,,Dwight,Eisenhower,Warren,Earl
+38,"Truman, Harry","Minton, Sherman",Rutledge,"September 15, 1949",C,4-Oct-1949,48,16,0,,Harry,Truman,Minton,Sherman
+39,"Truman, Harry","Clark, Tom",Murphy,"August 2, 1949",C,18-Aug-1949,73,8,0,,Harry,Truman,Clark,Tom
+40,"Truman, Harry","Vinson, Fred",Stone,"June 6, 1946",C,20-Jun-1946,,,1,,Harry,Truman,Vinson,Fred
+41,"Truman, Harry","Burton, Harold",Roberts,"September 18, 1945",C,19-Sep-1945,,,1,,Harry,Truman,Burton,Harold
+42,"Roosevelt, Franklin","Rutledge, Wiley",Byrnes,"January 11, 1943",C,8-Feb-1943,,,1,,Franklin,Roosevelt,Rutledge,Wiley
+43,"Roosevelt, Franklin","Jackson, Robert",Stone,"June 12, 1941",C,7-Jul-1941,,,1,,Franklin,Roosevelt,Jackson,Robert
+44,"Roosevelt, Franklin","Byrnes, James",McReynolds,"June 12, 1941",C,12-Jun-1941,,,1,,Franklin,Roosevelt,Byrnes,James
+45,"Roosevelt, Franklin","Stone, Harlan",Hughes,"June 12, 1941",C,27-Jun-1941,,,1,,Franklin,Roosevelt,Stone,Harlan
+46,"Roosevelt, Franklin","Murphy, Frank",Butler,"January 4, 1940",C,16-Jan-1940,,,1,,Franklin,Roosevelt,Murphy,Frank
+47,"Roosevelt, Franklin","Douglas, William",Brandeis,"March 20, 1939",C,4-Apr-1939,62,4,0,,Franklin,Roosevelt,Douglas,William
+48,"Roosevelt, Franklin","Frankfurter, Felix",Cardozo,"January 5, 1939",C,17-Jan-1939,,,1,,Franklin,Roosevelt,Frankfurter,Felix
+49,"Roosevelt, Franklin","Reed, Stanley",Sutherland,"January 15, 1938",C,25-Jan-1938,,,1,,Franklin,Roosevelt,Reed,Stanley
+50,"Roosevelt, Franklin","Black, Hugo",Van Devanter,"August 12, 1937",C,17-Aug-1937,63,16,0,,Franklin,Roosevelt,Black,Hugo
+51,"Hoover, Herbert","Cardozo, Benjamin",Holmes,"February 15, 1932",C,24-Feb-1932,,,1,,Herbert,Hoover,Cardozo,Benjamin
+52,"Hoover, Herbert","Roberts, Owen",Sanford,"May 9, 1930",C,20-May-1930,,,1,,Herbert,Hoover,Roberts,Owen
+53,"Hoover, Herbert","Parker, John",Sanford,"March 21, 1930",R,7-May-1930,39,41,0,,Herbert,Hoover,Parker,John
+54,"Hoover, Herbert","Hughes, Charles",Taft,"February 3, 1930",C,13-Feb-1930,52,26,0,,Herbert,Hoover,Hughes,Charles
+55,"Coolidge, Calvin","Stone, Harlan",McKenna,"January 5, 1925",C,5-Feb-1925,71,6,0,,Calvin,Coolidge,Stone,Harlan
+56,"Harding, Warren","Sanford, Edward",Pitney,"January 24, 1923",C,29-Jan-1923,,,1,,Warren,Harding,Sanford,Edward
+57,"Harding, Warren","Butler, Pierce",Day,"December 5, 1922",C,21-Dec-1922,61,8,0,,Warren,Harding,Butler,Pierce
 58,"Harding, Warren","Butler, Pierce",Day,"November 21, 1922",N,,,,0,,Warren,Harding,Butler,Pierce
-59,"Harding, Warren","Sutherland, George",Clarke,"September 5, 1922",C,5-Sep-22,,,1,,Warren,Harding,Sutherland,George
-60,"Harding, Warren","Taft, William",White,"June 30, 1921",C,30-Jun-21,60,4,0,,Warren,Harding,Taft,William
-61,"Wilson, Woodrow","Clarke, John",Hughes,"July 14, 1916",C,24-Jul-16,,,1,,Woodrow,Wilson,Clarke,John
-62,"Wilson, Woodrow","Brandeis, Louis",Lamar,"January 28, 1916",C,1-Jun-16,47,22,0,,Woodrow,Wilson,Brandeis,Louis
-63,"Wilson, Woodrow","McReynolds, James",Lurton,"August 19, 1914",C,29-Aug-14,44,6,0,,Woodrow,Wilson,McReynolds,James
-64,"Taft, William","Pitney, Mahlon",Harlan,"February 19, 1912",C,13-Mar-12,50,26,0,,William,Taft,Pitney,Mahlon
-65,"Taft, William","Lamar, Joseph",Moody,"December 12, 1910",C,15-Dec-10,,,1,,William,Taft,Lamar,Joseph
-66,"Taft, William","Devanter, Willis Van",White,"December 12, 1910",C,15-Dec-10,,,1,,William,Taft,Devanter,Willis Van
-67,"Taft, William","White, Edward",Fuller,"December 12, 1910",C,12-Dec-10,,,1,,William,Taft,White,Edward
-68,"Taft, William","Hughes, Charles",Brewer,"April 25, 1910",C,2-May-10,,,1,,William,Taft,Hughes,Charles
-69,"Taft, William","Lurton, Horace",Peckham,"December 13, 1909",C,20-Dec-09,,,1,,William,Taft,Lurton,Horace
-70,"Roosevelt, Theodore","Moody, William",Brown,"December 3, 1906",C,12-Dec-06,,,1,,Theodore,Roosevelt,Moody,William
-71,"Roosevelt, Theodore","Day, William",Shiras,"February 19, 1903",C,23-Feb-03,,,1,,Theodore,Roosevelt,Day,William
-72,"Roosevelt, Theodore","Holmes, Oliver",Gray,"December 2, 1902",C,4-Dec-02,,,1,,Theodore,Roosevelt,Holmes,Oliver
+59,"Harding, Warren","Sutherland, George",Clarke,"September 5, 1922",C,5-Sep-1922,,,1,,Warren,Harding,Sutherland,George
+60,"Harding, Warren","Taft, William",White,"June 30, 1921",C,30-Jun-1921,60,4,0,,Warren,Harding,Taft,William
+61,"Wilson, Woodrow","Clarke, John",Hughes,"July 14, 1916",C,24-Jul-1916,,,1,,Woodrow,Wilson,Clarke,John
+62,"Wilson, Woodrow","Brandeis, Louis",Lamar,"January 28, 1916",C,1-Jun-1916,47,22,0,,Woodrow,Wilson,Brandeis,Louis
+63,"Wilson, Woodrow","McReynolds, James",Lurton,"August 19, 1914",C,29-Aug-1914,44,6,0,,Woodrow,Wilson,McReynolds,James
+64,"Taft, William","Pitney, Mahlon",Harlan,"February 19, 1912",C,13-Mar-1912,50,26,0,,William,Taft,Pitney,Mahlon
+65,"Taft, William","Lamar, Joseph",Moody,"December 12, 1910",C,15-Dec-1910,,,1,,William,Taft,Lamar,Joseph
+66,"Taft, William","Devanter, Willis Van",White,"December 12, 1910",C,15-Dec-1910,,,1,,William,Taft,Devanter,Willis Van
+67,"Taft, William","White, Edward",Fuller,"December 12, 1910",C,12-Dec-1910,,,1,,William,Taft,White,Edward
+68,"Taft, William","Hughes, Charles",Brewer,"April 25, 1910",C,2-May-1910,,,1,,William,Taft,Hughes,Charles
+69,"Taft, William","Lurton, Horace",Peckham,"December 13, 1909",C,20-Dec-1909,,,1,,William,Taft,Lurton,Horace
+70,"Roosevelt, Theodore","Moody, William",Brown,"December 3, 1906",C,12-Dec-1906,,,1,,Theodore,Roosevelt,Moody,William
+71,"Roosevelt, Theodore","Day, William",Shiras,"February 19, 1903",C,23-Feb-1903,,,1,,Theodore,Roosevelt,Day,William
+72,"Roosevelt, Theodore","Holmes, Oliver",Gray,"December 2, 1902",C,4-Dec-1902,,,1,,Theodore,Roosevelt,Holmes,Oliver
 73,"McKinley, William","McKenna, Joseph",Field,"December 16, 1897",C,"January 21, 1898",,,1,,William,McKinley,McKenna,Joseph
 74,"Cleveland, Grover","Peckham, Rufus",Jackson,"December 3, 1895",C,"December 9, 1895",,,1,,Grover,Cleveland,Peckham,Rufus
 75,"Cleveland, Grover","White, Edward",Blatchford,"February 19, 1894",C,"February 19, 1894",,,1,,Grover,Cleveland,White,Edward

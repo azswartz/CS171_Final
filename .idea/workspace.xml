@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15c348c0-f868-4fe3-bde1-0b12469763e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/CS171_Final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/courtStacking.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/vis3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/vis3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis3/supreme_court_stacking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/supreme_court_stacking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/data/confirmations_party_breakdown.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/data/confirmations_party_breakdown.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/data/justice_confirmations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/data/justice_confirmations.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kInSccEpVejhGOuXTUMN1AbxWc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15c348c0-f868-4fe3-bde1-0b12469763e6" name="Default Changelist" comment="" />
+      <created>1605396974931</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605396974931</updated>
+      <workItem from="1605396976202" duration="11598000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="527" y="238" width="670" height="678" key="search.everywhere.popup" timestamp="1605400360858">
+      <screen x="0" y="23" width="1680" height="982" />
+    </state>
+    <state x="527" y="238" width="670" height="676" key="search.everywhere.popup/1680.23.2560.1057/0.23.1680.980@0.23.1680.980" timestamp="1605398086601" />
+    <state x="527" y="238" width="670" height="678" key="search.everywhere.popup/1680.23.2560.1057/0.23.1680.982@0.23.1680.982" timestamp="1605400360858" />
+  </component>
+</project>
