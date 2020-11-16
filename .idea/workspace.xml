@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c348c0-f868-4fe3-bde1-0b12469763e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CS171_Final.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/courtStacking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/vis3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/vis3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis3/courtStacking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/courtStacking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis3/supreme_court_stacking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/supreme_court_stacking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/data/confirmations_party_breakdown.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/data/confirmations_party_breakdown.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/data/justice_confirmations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/data/justice_confirmations.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis3/vis3.css" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis3/vis3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605396974931</updated>
-      <workItem from="1605396976202" duration="11598000" />
+      <workItem from="1605396976202" duration="23378000" />
     </task>
     <servers />
   </component>

@@ -6,4 +6,17 @@ svg {
     stroke-width: 0px;
 }
 
+.dot-bar-fraction {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Helvetica Neue";
+}
 
+.vis-3-year {
+    font-size: 14px;
+}
+
+.vis-3-y-label {
+    font-size: 23px;
+    font-family: "Helvetica Neue";
+}
