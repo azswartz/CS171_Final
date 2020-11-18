@@ -36,7 +36,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Visualization_Code" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -54,6 +54,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605396974931</updated>
       <workItem from="1605396976202" duration="23378000" />
+      <workItem from="1605490733008" duration="1212000" />
+      <workItem from="1605668015228" duration="7008000" />
     </task>
     <servers />
   </component>
@@ -64,6 +66,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1605493597759">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605493597759" />
     <state x="527" y="238" width="670" height="678" key="search.everywhere.popup" timestamp="1605400360858">
       <screen x="0" y="23" width="1680" height="982" />
     </state>

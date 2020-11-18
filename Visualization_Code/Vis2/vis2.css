@@ -6,6 +6,10 @@
     width: 100%;
     height: 40VH;
 }
+#pop-vis{
+    width: 100%;
+    height: 40VH;
+}
 
 .center{
     display: flex;

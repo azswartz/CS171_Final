@@ -1,5 +1,5 @@
 
-let senate_balance;
+let senate_balance, pop_balance;
 
 function sliderUpdate(){
     let count = Number($("#national-slider").val());
@@ -16,6 +16,7 @@ function sliderUpdate(){
     d3.select("#national-winner").text(party);
 
     senate_balance.wrangleData(national_split);
+    pop_balance.wrangleData(national_split);
 }
 
 let files = [
@@ -28,7 +29,7 @@ Promise.all(files)
         let statepops = {};
 
         data[1].forEach(d => {
-            statepops[state_to_abbrev[d.State]] = Number(d.Pop);
+            statepops[state_to_abbrev[d.State]] = Math.round(Number(d.Pop)/1000)*1000;
         })
 
         let states = data[0].map(d => {
@@ -47,5 +48,19 @@ Promise.all(files)
 
 
         states.sort((a,b) => a.lean - b.lean);
-        senate_balance = new SenateBalance("senate-vis", states, 0);
+        senate_balance = new SenateBalance("senate-vis", states, false);
+        pop_balance = new SenateBalance("pop-vis", states, true);
+
     })
+
+function highlight(state){
+    senate_balance.highlight_seat(state);
+    pop_balance.highlight_seat(state);
+
+}
+
+function clear(state){
+    senate_balance.clear_seat(state);
+    pop_balance.clear_seat(state);
+
+}
