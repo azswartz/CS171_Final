@@ -28,6 +28,12 @@
         <div class="col">
             <div class="content">
                 <div class="container-fluid">
+                    <div class="row">
+                        The policy of having two Senators per state regardless of population was part of the "Great Compromise" of the Constitutional Convention.
+                        This means that citizens in smaller states are more represented in the Senate than citizens in more populous states.
+                        The visualization below shows the results of this distortion across different states and different periods of time.*
+                    </div>
+                    <br>
                     <form class="form-inline row">
                         <div class="form-group selectbox">
                             <label for="year-select">Year:</label>
@@ -69,7 +75,8 @@
                     </form>
                     <div id="barchart" class="row" style="width:100%; height:100%"></div>
                     <div class="row">
-                        To achieve equal representation for each citizen, we would need to reallocate&nbsp;<span id="distortion"></span>&nbsp;senators across states.
+                        To achieve equal representation for each citizen, we would need to reallocate&nbsp;<b id="distortion"></b>&nbsp;senators across states.<br>
+                        <div>U.S. citizens in&nbsp;<b id="minstate"></b>&nbsp;are represented in the Senate&nbsp;<b id="maxdiscrepancy"></b>&nbsp;times more than citizens in&nbsp;<b id="maxstate"></b>.</div>
                     </div>
                     <br>
                     <div class="row">
@@ -78,6 +85,7 @@
                         We are also ignoring other more minor historical issues, such as the fact that Massachusetts used to include Maine.
                         These issues aside, this distortion has increased over time, as demonstrated by the graph below:
                     </div>
+                    <div id="linegraph" class="row" style="width:100%; height:100%"></div>
                 </div>
             </div>
         </div>
@@ -100,5 +108,6 @@
 <!-- own js files -->
 <script src="js/main.js"></script>
 <script src="js/BarChart.js"></script>
+<script src="js/LineGraph.js"></script>
 </body>
 </html>

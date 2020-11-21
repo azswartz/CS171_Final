@@ -1,20 +1,13 @@
-class BarChart {
+class LineGraph {
     constructor(parentElement, data) {
         this.parentElement = parentElement;
         this.data = data;
-        this.filteredData = data;
-        this.displayData;
-        this.displayDataByState;
-        this.year = "2020";
-        this.type = "spp"
         this.initVis();
     }
 
 
     initVis() {
         let vis = this;
-
-
         vis.margin = {top: 20, right: 20, bottom: 75, left: 60};
 
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
@@ -28,16 +21,12 @@ class BarChart {
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
         // Scales and axes
-        vis.x = d3.scaleBand().rangeRound([0, vis.width])
-            .paddingInner(0.15);
-        vis.y = d3.scaleLinear().range([vis.height,0]);
-        vis.colorPos = d3.scaleLinear().domain([0, 2]).range(["white", "#64a164"]);
-        vis.colorNeg = d3.scaleLinear().domain([0, -11]).range(["white", "darkred"]);
+        vis.x = d3.scaleLinear.domain([1790,2020]).range([0,vis.width]);
+        vis.y = d3.scaleLinear().domain([0,40]).range([vis.height,0]);
         vis.xAxis = d3.axisBottom()
             .scale(vis.x);
         vis.yAxis = d3.axisLeft()
-            .scale(vis.y)
-            .tickFormat(d3.format(".1e"));
+            .scale(vis.y);
 
         // Append axes
         vis.svg.append("g")
@@ -53,7 +42,7 @@ class BarChart {
             .attr("x", -vis.height / 2)
             .attr("y",-50)
             .attr("transform","rotate(-90)")
-            .text("here I am");
+            .text("Reallocations Needed to Achieve Equal Representation");
 
         vis.wrangleData();
     }
@@ -103,16 +92,6 @@ class BarChart {
         //console.log(vis.filteredStates);
         vis.x.domain(vis.filteredStates);
 
-        if(vis.type === "spp"){
-            vis.y.domain([0,2 / min]);
-            vis.yAxis.tickFormat(d3.format(".1e"));
-            vis.svg.select(".x-axis").attr("transform","translate(0," + vis.height + ")");
-        } else {
-            vis.y.domain([d3.min(vis.displayData.map(d => d.distortion)),2]);
-            vis.yAxis.tickFormat(d3.format(".1f"));
-            vis.svg.select(".x-axis").attr("transform","translate(0," + vis.y(0) + ")");
-        }
-
 
         // Update the visualization
         vis.updateVis();
@@ -122,6 +101,21 @@ class BarChart {
     updateVis() {
         let vis = this;
 
-        
+        /*vis.svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "steelblue")
+            .attr("stroke-width", 1.5)
+            .attr("d", d3.line()
+                .x(function (d) {
+                    return x(d.date)
+                })
+                .y(function (d) {
+                    return y(d.value)
+                })
+            )*/
 
+        vis.svg.select(".y-axis").call(vis.yAxis);
+        vis.svg.select(".x-axis").call(vis.xAxis);
+    }
 }

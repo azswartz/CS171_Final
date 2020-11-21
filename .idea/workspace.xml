@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="15c348c0-f868-4fe3-bde1-0b12469763e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/js/distortionOverTime.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/js/barchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/js/barchart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/js/distortionOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/js/linegraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/state_bias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/state_bias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/state_bias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/state_bias.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,7 +75,7 @@
       <workItem from="1605396976202" duration="23378000" />
       <workItem from="1605490733008" duration="1212000" />
       <workItem from="1605668015228" duration="7008000" />
-      <workItem from="1605925198021" duration="4809000" />
+      <workItem from="1605925198021" duration="7684000" />
     </task>
     <servers />
   </component>

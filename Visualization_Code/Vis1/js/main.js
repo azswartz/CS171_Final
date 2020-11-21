@@ -12,6 +12,7 @@ d3.csv("data/states_pop.csv", (row) => {
 
     //initialize visualization
     barchart = new BarChart("barchart", data);
+    linegraph = new LineGraph("linegraph", data);
 });
 
 function updateVisualization(){

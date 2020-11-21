@@ -95,6 +95,11 @@ class BarChart {
                 distortion += vis.displayData[i]["distortion"];
             }
         }
+        let minState = vis.filteredData[0];
+        let maxState = vis.filteredData[n - 1];
+        $("#minstate").html(minState.State);
+        $("#maxstate").html(maxState.State);
+        $("#maxdiscrepancy").html(Math.round(maxState[vis.year] * 100 / minState[vis.year]) / 100);
         $("#distortion").html(Math.round(distortion * 100) / 100);
         //console.log(distortion);
 
