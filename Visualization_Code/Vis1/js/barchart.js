@@ -139,7 +139,7 @@ class BarChart {
                         return vis.colorPos(d.distortion);
                     return vis.colorNeg(d.distortion);
                 })
-                .attr("stroke", "gray")
+                .attr("stroke", "darkgray")
                 .attr("stroke-width", 1)
                 .attr("x", d => vis.x(d.state))
                 .attr("y", d => vis.y(2 / d.pop))
@@ -153,7 +153,7 @@ class BarChart {
                 .attr("class","bar-label")
                 .merge(vis.barlabels)
                 .transition()
-                .attr("fill", "gray")
+                .attr("fill", "darkgray")
                 .attr("text-anchor","middle")
                 .attr("x",d => vis.x(d.state) + vis.x.bandwidth() / 2)
                 .attr("y",d => vis.y(2 / d.pop) - 5)

@@ -21,10 +21,11 @@ class LineGraph {
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
         // Scales and axes
-        vis.x = d3.scaleLinear.domain([1790,2020]).range([0,vis.width]);
+        vis.x = d3.scaleLinear().domain([1790,2020]).range([0,vis.width]);
         vis.y = d3.scaleLinear().domain([0,40]).range([vis.height,0]);
         vis.xAxis = d3.axisBottom()
-            .scale(vis.x);
+            .scale(vis.x)
+            .tickFormat(d3.format("d"));
         vis.yAxis = d3.axisLeft()
             .scale(vis.y);
 
@@ -50,48 +51,33 @@ class LineGraph {
 
     wrangleData() {
         let vis = this;
-        vis.year = d3.select("#year-select").property("value");
-        vis.type = d3.select("#ranking-type").property("value");
+        vis.distortion = {};
 
-        //filter data for year
-        vis.filteredData = vis.data.filter(d => {
-            return d[vis.year] > 0 && vis.year >= d.yearOfStatehood;
-        });
-        vis.filteredData.sort((a,b) => a[vis.year] - b[vis.year]);
-
-
-        //get data into the form we want
-        let n = vis.filteredData.length;
-        let min = vis.filteredData[0][vis.year];
-        let pop = 0;
-        vis.displayData = new Array(n);
-        vis.displayDataByState = {};
-        for(let i = 0; i < n; i++){
-            let d = vis.filteredData[i];
-            pop += d[vis.year];
-            vis.displayData[i] = {"state":d.State,"pop":d[vis.year]};
-            vis.displayDataByState[d.State] = {"pop": d[vis.year]};
-            if(d[vis.year] < min) min = d[vis.year];
-        }
-
-        //compute distortion
-        let distortion = 0;
-        for(let i = 0; i < n; i++){
-            let d = vis.filteredData[i];
-            vis.displayData[i]["distortion"] = 2 - 2 * n * d[vis.year] / pop;
-            vis.displayDataByState[d.State]["distortion"] = 2 - 2 * n * d[vis.year] / pop;
-            if(vis.displayData[i]["distortion"] > 0){
-                distortion += vis.displayData[i]["distortion"];
+        //get distortion by year
+        vis.years = []
+        for(let y = 1790; y <= 2020; y += 10){
+            vis.years.push(y);
+            vis.filteredData = vis.data.filter(d => {
+                return d[y] > 0 && y >= d.yearOfStatehood;
+            });
+            let n = vis.filteredData.length;
+            let distortion = 0;
+            let pop = 0;
+            for(let i = 0; i < n; i++){
+                let d = vis.filteredData[i];
+                pop += d[y];
             }
+            for(let i = 0; i < n; i++){
+                let d = vis.filteredData[i];
+                if(2 - 2 * n * d[y] / pop > 0){
+                    distortion += 2 - 2 * n * d[y] / pop;
+                }
+            }
+            vis.distortion[y] = distortion;
         }
-        $("#distortion").html(Math.round(distortion * 100) / 100);
-        //console.log(distortion);
+        //console.log(vis.distortion);
 
-        //update scales
-        vis.filteredStates = vis.filteredData.map(d=> d.State);
-        //console.log(vis.filteredStates);
-        vis.x.domain(vis.filteredStates);
-
+        vis.xAxis.tickValues(vis.years);
 
         // Update the visualization
         vis.updateVis();
@@ -101,19 +87,29 @@ class LineGraph {
     updateVis() {
         let vis = this;
 
-        /*vis.svg.append("path")
-            .datum(data)
+        vis.svg.append("path")
+            .datum(vis.years)
             .attr("fill", "none")
             .attr("stroke", "steelblue")
             .attr("stroke-width", 1.5)
             .attr("d", d3.line()
                 .x(function (d) {
-                    return x(d.date)
+                    return vis.x(d);
                 })
                 .y(function (d) {
-                    return y(d.value)
+                    return vis.y(vis.distortion[d]);
                 })
-            )*/
+            )
+
+        vis.svg.selectAll("circle")
+            .data(vis.years)
+            .enter()
+            .append("circle")
+            .attr("fill", "gray")
+            .attr("stroke", "none")
+            .attr("cx", d => vis.x(d))
+            .attr("cy", d => vis.y(vis.distortion[d]))
+            .attr("r", 4);
 
         vis.svg.select(".y-axis").call(vis.yAxis);
         vis.svg.select(".x-axis").call(vis.xAxis);
