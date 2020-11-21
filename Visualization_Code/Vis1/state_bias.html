@@ -8,7 +8,7 @@
 
     <!-- Load CSS libraries -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- GOOGLE FONTS -->
@@ -69,14 +69,20 @@
                     </form>
                     <div id="barchart" class="row" style="width:100%; height:100%"></div>
                     <div class="row">
-                        To achieve equal representation for each citizen, we would need to reallocate&nbsp;<span id="distortion"></span>&nbsp;senators.
+                        To achieve equal representation for each citizen, we would need to reallocate&nbsp;<span id="distortion"></span>&nbsp;senators across states.
+                    </div>
+                    <br>
+                    <div class="row">
+                        *Note that for historical data, we have ignored historical issues of voting rights and are just taking total population into account,
+                        including children and members of the population who were denied right to vote.
+                        We are also ignoring other more minor historical issues, such as the fact that Massachusetts used to include Maine.
+                        These issues aside, this distortion has increased over time, as demonstrated by the graph below:
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-auto forwardregion">
-            <a href="../Vis2/senate_bias.html" id="forwardbutton">Next</a>
-
+            <a href="../Vis1b/state_bias.html" id="forwardbutton">Next</a>
         </div>
     </div>
 </div>

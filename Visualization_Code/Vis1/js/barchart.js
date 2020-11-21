@@ -29,8 +29,10 @@ class BarChart {
 
         // Scales and axes
         vis.x = d3.scaleBand().rangeRound([0, vis.width])
-            .paddingInner(0.1);
+            .paddingInner(0.15);
         vis.y = d3.scaleLinear().range([vis.height,0]);
+        vis.colorPos = d3.scaleLinear().domain([0, 2]).range(["white", "#64a164"]);
+        vis.colorNeg = d3.scaleLinear().domain([0, -11]).range(["white", "darkred"]);
         vis.xAxis = d3.axisBottom()
             .scale(vis.x);
         vis.yAxis = d3.axisLeft()
@@ -46,8 +48,12 @@ class BarChart {
             .attr("class", "y-axis axis");
 
         // Axis titles
-        vis
-
+        vis.svg.append("text")
+            .attr("class", "y-axis-label")
+            .attr("x", -vis.height / 2)
+            .attr("y",-50)
+            .attr("transform","rotate(-90)")
+            .text("here I am");
 
         vis.wrangleData();
     }
@@ -93,7 +99,9 @@ class BarChart {
         //console.log(distortion);
 
         //update scales
-        vis.x.domain(vis.filteredData.map(d=> d.State));
+        vis.filteredStates = vis.filteredData.map(d=> d.State);
+        //console.log(vis.filteredStates);
+        vis.x.domain(vis.filteredStates);
 
         if(vis.type === "spp"){
             vis.y.domain([0,2 / min]);
@@ -114,13 +122,20 @@ class BarChart {
     updateVis() {
         let vis = this;
 
+        //update bars
         if(vis.type === "spp"){
             vis.rectangles = vis.svg.selectAll("rect").data(vis.displayData);
             vis.rectangles.enter()
                 .append("rect")
                 .merge(vis.rectangles)
                 .transition()
-                .attr("fill","purple")
+                .attr("fill", d => {
+                    if(d.distortion > 0)
+                        return vis.colorPos(d.distortion);
+                    return vis.colorNeg(d.distortion);
+                })
+                .attr("stroke", "gray")
+                .attr("stroke-width", 1)
                 .attr("x", d => vis.x(d.state))
                 .attr("y", d => vis.y(2 / d.pop))
                 .attr("height", d => vis.height - vis.y(2 / d.pop))
@@ -133,7 +148,7 @@ class BarChart {
                 .attr("class","bar-label")
                 .merge(vis.barlabels)
                 .transition()
-                .attr("fill","purple")
+                .attr("fill", "gray")
                 .attr("text-anchor","middle")
                 .attr("x",d => vis.x(d.state) + vis.x.bandwidth() / 2)
                 .attr("y",d => vis.y(2 / d.pop) - 5)
@@ -148,7 +163,13 @@ class BarChart {
                 .append("rect")
                 .merge(vis.rectangles)
                 .transition()
-                .attr("fill","purple")
+                .attr("fill", d => {
+                    if(d.distortion > 0)
+                        return vis.colorPos(d.distortion);
+                    return vis.colorNeg(d.distortion);
+                })
+                .attr("stroke", "gray")
+                .attr("stroke-width", 1)
                 .attr("x", d => vis.x(d.state))
                 .attr("y", d => {
                     if(d.distortion > 0) return vis.y(d.distortion);
@@ -167,6 +188,7 @@ class BarChart {
 
         // Update axes
         if(vis.type === "spp"){
+            vis.svg.select(".y-axis-label").text("Senators per Person");
             vis.svg.select(".x-axis").transition().call(vis.xAxis)
                 .selectAll("text")
                 .text(d => d)
@@ -177,22 +199,25 @@ class BarChart {
                     return "rotate(-45)"
                 });
         } else {
+            vis.svg.select(".y-axis-label").text("Senators Exceeding Allocation by Population");
             vis.svg.select(".x-axis").transition().call(vis.xAxis)
                 .selectAll("text")
                 .text(d => d)
                 .style("text-anchor", d => {
-                    if(vis.displayDataByState[d].distortion > 0)
+                    if(vis.filteredStates.includes(d) && vis.displayDataByState[d].distortion > 0)
                         return "end";
                     else return "start";
                 })
                 .attr("dx", d => {
-                    if(vis.displayDataByState[d].distortion > 0)
+                    if(vis.filteredStates.includes(d) && vis.displayDataByState[d].distortion > 0)
                         return "-.8em";
-                    else return ".8em";
+                    else {
+                        return ".8em";
+                    }
                 })
                 .attr("dy", "-.50em")
-                .attr("transform", function(d) {
-                    return "rotate(-75)"
+                .attr("transform", d => {
+                    return "rotate(-75)";
                 });
         }
 
