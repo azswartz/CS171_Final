@@ -28,33 +28,44 @@
         </div>
         <div class="col">
             <div class="row">
-                <label for="national-slider">Suppose the
-                    <div id="national-winner" class="box">Democrats</div>
-                    win the national popular vote by <div id="national-count" class="box">0%</div>:</label>
+                <label for="national-slider">In the scenario where <div id="national-count" class="box">0%</div> more people vote for
+                the <div id="national-winner" class="box">Democrats</div> than the <div id="national-loser" class="box">Republicans</div>
+                    across the entire nation: </label>
             </div>
-            <div class="row center" style="padding-bottom: 5VH">
+            <div class="row center" style="padding-bottom: 1VH; border-bottom: dashed">
                 <div class="caption">Favoring Democrats</div>
                 <input type="range" min="-10" max="10" value="0" id="national-slider" oninput="sliderUpdate()">
                 <div class="caption">Favoring Republicans</div>
             </div>
 
-            <div class="row">
-                <label>
-                    Then the <div id="senate-winner" class="box"> .. </div> control the Senate with
-                    a <div id="senate-count" class="box"> .. </div> seat majority
-                    <div id="senate-seats" class="box"></div>
-                    while representing <div id="majority-rep" class="box"> ? </div> of the US population.</label>
+            <div class="row" style="padding-top: 1VH">
+                <div class="col-lg-6" style="border-right: dashed">
+                    <div class="row center">
 
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
+                        <div class="title">The Expected Number of Senate Seats by Party is:</div> <br>
+                        <div><label><div id="senate-winner" class="box"> Republicans </div> hold majority
+                        of <div id="senate-count" class="box"> 26 </div> seats.</label></div>
+                    </div>
+                    <div class="row">
                         <div id="senate-vis"></div>
+                    </div>
+
                 </div>
 
                 <div class="col-lg-6">
-                    <div id="pop-vis"></div>
+                    <div class="row center">
+                        <div class="title">The Expected Number of People Represented by Party is: </div> <br>
+                        <label>The majority party represents
+                            <div id="majority-rep" class="box"> 12% </div> more people than the minority party.
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div id="pop-vis"></div>
+                    </div>
                 </div>
+            </div>
+            <div class="row center">
+                <p id="tip" class="highlight"></p>
             </div>
         </div>
         <div class="col-auto forwardregion">

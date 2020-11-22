@@ -5,15 +5,18 @@ function sliderUpdate(){
     let count = Number($("#national-slider").val());
     let national_split = count;
 
-    let party = "Republicans";
-
+    if (count > 0) {
+        d3.select("#national-count").text(`${count}%`);
+        d3.select("#national-winner").text("Republicans");
+        d3.select("#national-loser").text("Democrats");
+    }
     if (count <= 0){
-        party = "Democrats";
         count = - count;
+        d3.select("#national-count").text(`${count}%`);
+        d3.select("#national-loser").text("Republicans");
+        d3.select("#national-winner").text("Democrats");
     }
 
-    d3.select("#national-count").text(`${count}%`);
-    d3.select("#national-winner").text(party);
 
     senate_balance.wrangleData(national_split);
     pop_balance.wrangleData(national_split);
@@ -56,11 +59,50 @@ Promise.all(files)
 function highlight(state){
     senate_balance.highlight_seat(state);
     pop_balance.highlight_seat(state);
+    state = senate_balance.state_info(state);
+
+    let tilt = state.lean + senate_balance.national_split;
+    let rep;
+
+    if (tilt > 0){
+        rep = "2 Republicans";
+    }
+    if (tilt < 0){
+        rep = "2 Democrats";
+    }
+    if (tilt === 0){
+        rep = "1 Democrat and 1 Republican";
+    }
+
+    if (tilt > 0){
+        tilt = `R+${tilt}`
+    }else{
+        tilt = `D+${-tilt}`;
+    }
+
+    let party;
+    if (state.lean > 0){
+        party = "Republican";
+    }else{
+        party = "Democratic";
+    }
+
+
+
+    d3.select("#tip").node().innerHTML = `${state.state} is ${Math.abs(state.lean)} more points ${party} than the national average, 
+    which means that its outcome is ${tilt} this election. Therefore, we would expect on average that its ${state.pop.toLocaleString()} residents
+are represented by ${rep}.`
+    d3.select("#tip").node().style.visibility = "visible";
+
+    // let height = d3.select("#tip").node().getBoundingClientRect().height;
+    // d3.select("#tip").node().height = height;
+    // d3.select("#tip").node().style.height = height;
+
 
 }
 
 function clear(state){
     senate_balance.clear_seat(state);
     pop_balance.clear_seat(state);
-
+    d3.select("#tip").node().style.visibility = "hidden";
 }

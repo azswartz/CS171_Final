@@ -4,11 +4,15 @@
 
 #senate-vis{
     width: 100%;
-    height: 40VH;
+    height: 60VH;
 }
 #pop-vis{
     width: 100%;
-    height: 40VH;
+    height: 60VH;
+}
+
+#tip{
+    font-size: small;
 }
 
 .center{
@@ -22,12 +26,24 @@
     font-weight: bold;
 }
 
+.highlight{
+    /*display: block;*/
+    background-color: AntiqueWhite;
+}
 
+.title{
+    font-weight: bold;
+    /*text-decoration: underline;*/
+}
 .caption{
     display: inline;
     font-size: small;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.legend{
+    font-size: small;
 }
 
 .bluestate{
@@ -37,5 +53,10 @@
 
 .redstate{
     fill: firebrick;
+    stroke: black;
+}
+
+.balance{
+    fill: grey;
     stroke: black;
 }
