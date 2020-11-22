@@ -1,5 +1,5 @@
 //get data from the csv
-let barchart;
+let barchart, linegraph;
 d3.csv("data/states_pop.csv", (row) => {
     for(let i = 1790; i < 2021; i += 10){
         let year = "" + i;

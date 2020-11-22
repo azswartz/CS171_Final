@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The election was rigged</title>
+    <title>Representation Bias Along Party Lines</title>
 
     <!-- Load CSS libraries -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -19,7 +19,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <h3>U.S. citizens are represented unequally in the Senate across different states.</h3>
+        <h3>This distortion in the Senate favors Republicans, since small states tend to lean right.</h3>
     </div>
     <div class="row mainbody">
         <div class="col-auto backregion">
@@ -28,49 +28,12 @@
         <div class="col">
             <div class="content">
                 <div class="container-fluid">
-                    <form class="form-inline row">
-                        <div class="form-group selectbox">
-                            <label for="year-select">Year:</label>
-                            &nbsp;
-                            <select class="form-control" id="year-select" onchange="updateVisualization()">
-                                <option value="2020">2020</option>
-                                <option value="2010">2010</option>
-                                <option value="2000">2000</option>
-                                <option value="1990">1990</option>
-                                <option value="1980">1980</option>
-                                <option value="1970">1970</option>
-                                <option value="1960">1960</option>
-                                <option value="1950">1950</option>
-                                <option value="1940">1940</option>
-                                <option value="1930">1930</option>
-                                <option value="1920">1920</option>
-                                <option value="1910">1910</option>
-                                <option value="1900">1900</option>
-                                <option value="1890">1890</option>
-                                <option value="1880">1880</option>
-                                <option value="1870">1870</option>
-                                <option value="1860">1860</option>
-                                <option value="1850">1850</option>
-                                <option value="1840">1840</option>
-                                <option value="1830">1830</option>
-                                <option value="1820">1820</option>
-                                <option value="1810">1810</option>
-                                <option value="1800">1800</option>
-                                <option value="1790">1790</option>
-                            </select>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <label for="ranking-type">Viewing:</label>
-                            &nbsp;
-                            <select class="form-control" id="ranking-type" onchange="updateVisualization()">
-                                <option value="spp">Senators per person</option>
-                                <option value="nes">Number of "extra" senators</option>
-                            </select>
-                        </div>
-                    </form>
-                    <div id="barchart" class="row" style="width:100%; height:100%"></div>
                     <div class="row">
-                        To achieve equal representation for each citizen, we would need to reallocate&nbsp;<span id="distortion"></span>&nbsp;senators.
+                        The policy of having two Senators per state regardless of population was part of the "Great Compromise" of the Constitutional Convention.
+                        This means that citizens in smaller states are more represented in the Senate than citizens in more populous states.
+                        The visualization below shows the results of this distortion across different states and different periods of time.*
                     </div>
+                    <div id="scatterplot" class="row" style="width:100%; height:100%"></div>
                 </div>
             </div>
         </div>
