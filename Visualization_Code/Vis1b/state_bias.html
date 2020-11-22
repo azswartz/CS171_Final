@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Representation Bias Along Party Lines</title>
+
+    <!-- Load CSS libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <h3>This distortion in the Senate favors Republicans, since small states tend to lean right.</h3>
+    </div>
+    <div class="row mainbody">
+        <div class="col-auto backregion">
+            <a href="../Vis1/state_bias.html" id="beginbutton">Back</a>
+        </div>
+        <div class="col">
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        In the visualization below, each dot represents a state. The x-axis is partisan lean in favor of the Republican party.
+                        For example, if a state has a rightward partisan lean of 5%, then this means that the popularity of the Republican party within that state is 5% higher than the national average.
+                        The y-axis is either state population or Senators per person in that state. The solid line is the line of best fit, and is colored according to the sign of its slope.
+                    </div>
+                    <br>
+                    <form class="form-inline row">
+                        <div class="form-group selectbox">
+                            <label for="type-select">Y-Axis:</label>
+                            &nbsp;
+                            <select class="form-control" id="type-select" onchange="updateVis()">
+                                <option value="spp">Senators per person</option>
+                                <option value="pop">Population</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div id="scatterplot" class="row" style="width:100%; height:100%"></div>
+                    <div class="row">
+                        <div>
+                            Because of the two Senator policy, left-leaning states are represented by&nbsp;<strong id="leftdist"></strong>&nbsp;Senators than would be allocated by population,
+                            and right-leaning states are represented by&nbsp;<strong id="rightdist"></strong>&nbsp;Senators than would be allocated by population.
+                            To see the effect this has on representation in the Senate, proceed to the next visualization.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto forwardregion">
+            <a href="../Vis2/senate_bias.html" id="forwardbutton">Next</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- embedding JS libraries -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<!-- own js files -->
+<script src="js/main.js"></script>
+<script src="js/ScatterPlot.js"></script>
+</body>
+</html>
