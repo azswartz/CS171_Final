@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c348c0-f868-4fe3-bde1-0b12469763e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/data/state_partisan_lean.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/data/states_pop_2020.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/scatterplot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/js/barchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/js/barchart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/state_bias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/state_bias.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/barchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/barchart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/data/states_pop_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/data/states_pop_2020.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/scatterplot.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/state_bias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/state_bias.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +83,7 @@
       <workItem from="1605396976202" duration="23378000" />
       <workItem from="1605490733008" duration="1212000" />
       <workItem from="1605668015228" duration="7008000" />
-      <workItem from="1605925198021" duration="13616000" />
+      <workItem from="1605925198021" duration="27809000" />
     </task>
     <servers />
   </component>
@@ -110,6 +109,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605493597759" />
+    <state x="517" y="388" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606010269601">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="517" y="388" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1606010269601" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1606028247718">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1440.877@0.23.1440.877" timestamp="1606028247718" />
     <state x="452" y="215" width="670" height="606" key="search.everywhere.popup" timestamp="1605989761811">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

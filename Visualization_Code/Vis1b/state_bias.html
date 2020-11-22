@@ -29,17 +29,34 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        The policy of having two Senators per state regardless of population was part of the "Great Compromise" of the Constitutional Convention.
-                        This means that citizens in smaller states are more represented in the Senate than citizens in more populous states.
-                        The visualization below shows the results of this distortion across different states and different periods of time.*
+                        In the visualization below, each dot represents a state. The x-axis is partisan lean in favor of the Republican party.
+                        For example, if a state has a rightward partisan lean of 5%, then this means that the popularity of the Republican party within that state is 5% higher than the national average.
+                        The y-axis is either state population or Senators per person in that state. The solid line is the line of best fit, and is colored according to the sign of its slope.
                     </div>
+                    <br>
+                    <form class="form-inline row">
+                        <div class="form-group selectbox">
+                            <label for="type-select">Y-Axis:</label>
+                            &nbsp;
+                            <select class="form-control" id="type-select" onchange="updateVis()">
+                                <option value="spp">Senators per person</option>
+                                <option value="pop">Population</option>
+                            </select>
+                        </div>
+                    </form>
                     <div id="scatterplot" class="row" style="width:100%; height:100%"></div>
+                    <div class="row">
+                        <div>
+                            Because of the two Senator policy, left-leaning states are represented by&nbsp;<strong id="leftdist"></strong>&nbsp;Senators than would be allocated by population,
+                            and right-leaning states are represented by&nbsp;<strong id="rightdist"></strong>&nbsp;Senators than would be allocated by population.
+                            To see the effect this has on representation in the Senate, proceed to the next visualization.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-auto forwardregion">
             <a href="../Vis2/senate_bias.html" id="forwardbutton">Next</a>
-
         </div>
     </div>
 </div>
@@ -56,6 +73,6 @@
 
 <!-- own js files -->
 <script src="js/main.js"></script>
-<script src="js/BarChart.js"></script>
+<script src="js/ScatterPlot.js"></script>
 </body>
 </html>

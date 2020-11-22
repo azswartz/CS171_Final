@@ -26,6 +26,9 @@ class BarChart {
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
             .append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
+        vis.barGroup = vis.svg.append("g");
+
+
 
         // Scales and axes
         vis.x = d3.scaleBand().rangeRound([0, vis.width])
@@ -40,11 +43,11 @@ class BarChart {
             .tickFormat(d3.format(".1e"));
 
         // Append axes
-        vis.svg.append("g")
+        vis.xAxisGp = vis.svg.append("g")
             .attr("class", "x-axis axis")
             .attr("transform", "translate(0," + vis.height + ")");
 
-        vis.svg.append("g")
+        vis.yAxisGp = vis.svg.append("g")
             .attr("class", "y-axis axis");
 
         // Axis titles
@@ -111,11 +114,9 @@ class BarChart {
         if(vis.type === "spp"){
             vis.y.domain([0,2 / min]);
             vis.yAxis.tickFormat(d3.format(".1e"));
-            vis.svg.select(".x-axis").attr("transform","translate(0," + vis.height + ")");
         } else {
             vis.y.domain([d3.min(vis.displayData.map(d => d.distortion)),2]);
             vis.yAxis.tickFormat(d3.format(".1f"));
-            vis.svg.select(".x-axis").attr("transform","translate(0," + vis.y(0) + ")");
         }
 
 
@@ -129,7 +130,7 @@ class BarChart {
 
         //update bars
         if(vis.type === "spp"){
-            vis.rectangles = vis.svg.selectAll("rect").data(vis.displayData);
+            vis.rectangles = vis.barGroup.selectAll("rect").data(vis.displayData);
             vis.rectangles.enter()
                 .append("rect")
                 .merge(vis.rectangles)
@@ -147,7 +148,7 @@ class BarChart {
                 .attr("width", vis.x.bandwidth());
             vis.rectangles.exit().remove();
 
-            vis.barlabels = vis.svg.selectAll(".bar-label").data(vis.displayData);
+            /*vis.barlabels = vis.svg.selectAll(".bar-label").data(vis.displayData);
             vis.barlabels.enter()
                 .append("text")
                 .attr("class","bar-label")
@@ -161,9 +162,9 @@ class BarChart {
                     if(d.distortion > 0) return "+" + Math.round(d.distortion * 10) / 10;
                     else return Math.round(d.distortion * 10) / 10;
                 });
-            vis.barlabels.exit().remove();
+            vis.barlabels.exit().remove();*/
         } else {
-            vis.rectangles = vis.svg.selectAll("rect").data(vis.displayData);
+            vis.rectangles = vis.barGroup.selectAll("rect").data(vis.displayData);
             vis.rectangles.enter()
                 .append("rect")
                 .merge(vis.rectangles)
@@ -173,7 +174,7 @@ class BarChart {
                         return vis.colorPos(d.distortion);
                     return vis.colorNeg(d.distortion);
                 })
-                .attr("stroke", "gray")
+                .attr("stroke", "darkgray")
                 .attr("stroke-width", 1)
                 .attr("x", d => vis.x(d.state))
                 .attr("y", d => {
@@ -194,7 +195,7 @@ class BarChart {
         // Update axes
         if(vis.type === "spp"){
             vis.svg.select(".y-axis-label").text("Senators per Person");
-            vis.svg.select(".x-axis").transition().call(vis.xAxis)
+            vis.xAxisGp.transition().attr("transform","translate(0," + vis.height + ")").call(vis.xAxis)
                 .selectAll("text")
                 .text(d => d)
                 .style("text-anchor", "end")
@@ -205,7 +206,7 @@ class BarChart {
                 });
         } else {
             vis.svg.select(".y-axis-label").text("Senators Exceeding Allocation by Population");
-            vis.svg.select(".x-axis").transition().call(vis.xAxis)
+            vis.xAxisGp.transition().attr("transform","translate(0," + vis.y(0) + ")").call(vis.xAxis)
                 .selectAll("text")
                 .text(d => d)
                 .style("text-anchor", d => {
@@ -226,7 +227,7 @@ class BarChart {
                 });
         }
 
-        vis.svg.select(".y-axis").transition().call(vis.yAxis);
+        vis.yAxisGp.transition().call(vis.yAxis);
     }
 
 }

@@ -10,3 +10,5 @@
     font-size: 10px;
     text-anchor: middle;
 }
+
+strong {display: inline !important}
