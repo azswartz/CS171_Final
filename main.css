@@ -18,6 +18,7 @@ h3{
     font-size: 3vh;
     /*padding-top: -2vh;*/
     padding-bottom: 2vh;
+    text-decoration: underline;
 }
 
 .centerdiv{

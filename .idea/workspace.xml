@@ -1,132 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="15c348c0-f868-4fe3-bde1-0b12469763e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/js/barchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/js/barchart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1/state_bias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1/state_bias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/data/states_pop_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/data/states_pop_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/js/scatterplot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualization_Code/Vis1b/state_bias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Visualization_Code/Vis1b/state_bias.html" afterDir="false" />
-    </list>
+    <list default="true" id="7e34dc59-564d-43b1-92c2-ffe039a68ba4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1kInSccEpVejhGOuXTUMN1AbxWc" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1kg2N2vwO9nJYzcegR15UB5KcBz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Visualization_Code/Vis1b/js" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Visualization_Code/Vis1b/js" />
-      <recent name="$PROJECT_DIR$/Visualization_Code/Vis1b/data" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="15c348c0-f868-4fe3-bde1-0b12469763e6" name="Default Changelist" comment="" />
-      <created>1605396974931</created>
+      <changelist id="7e34dc59-564d-43b1-92c2-ffe039a68ba4" name="Default Changelist" comment="" />
+      <created>1606107872293</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1605396974931</updated>
-      <workItem from="1605396976202" duration="23378000" />
-      <workItem from="1605490733008" duration="1212000" />
-      <workItem from="1605668015228" duration="7008000" />
-      <workItem from="1605675419270" duration="115000" />
-      <workItem from="1605823019525" duration="3903000" />
-      <workItem from="1605909595217" duration="6567000" />
-      <workItem from="1605925723345" duration="609000" />
-      <workItem from="1605998078384" duration="595000" />
-      <workItem from="1606062153459" duration="2984000" />
+      <updated>1606107872293</updated>
+      <workItem from="1606107874386" duration="63000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1605493597759">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605493597759" />
-    <state x="517" y="388" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606010269601">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="517" y="388" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1606010269601" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1606028247718">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="600" height="428" key="javadoc.popup/0.23.1440.877@0.23.1440.877" timestamp="1606028247718" />
-    <state x="452" y="215" width="670" height="606" key="search.everywhere.popup" timestamp="1605989761811">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="452" y="215" width="670" height="606" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1605989761811" />
-    <state x="527" y="238" width="670" height="676" key="search.everywhere.popup/1680.23.2560.1057/0.23.1680.980@0.23.1680.980" timestamp="1605398086601" />
-    <state x="527" y="238" width="670" height="678" key="search.everywhere.popup/1680.23.2560.1057/0.23.1680.982@0.23.1680.982" timestamp="1605400360858" />
   </component>
 </project>
