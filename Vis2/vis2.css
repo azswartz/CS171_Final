@@ -60,3 +60,18 @@
     fill: grey;
     stroke: black;
 }
+
+.tiptext{
+    font-size: 2VH;
+}
+
+@media (min-width: 992px) {
+    .col-lg-6:not(:last-child) {
+        border-right: dashed;
+    }
+}
+@media (max-width: 991px) {
+    .col-lg-6:last-child {
+        border-top: dashed;
+    }
+}

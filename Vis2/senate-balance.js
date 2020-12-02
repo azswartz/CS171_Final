@@ -92,6 +92,17 @@ class SenateBalance{
         vis.legend = vis.svg.append("g")
             .attr("class", "legend");
 
+        // let tooltip = vis.svg.append("g").attr("class", "tipbox");
+        // let text = tooltip.append("foreignObject")
+        //     .attr("x", 20)
+        //     .attr("y", 20)
+        //     .attr("width", 100)
+        //     .attr("height", 100)
+        // text.node().innerHTML = "<b>Hover here!</b>";
+        // vis.tooltip = [tooltip.append("text").attr("class", "tiptext").text("Hover over cell for details")];
+        // let shape = text.node().getBBox();
+        // console.log(shape);
+        // tooltip.attr("transform", `translate(${vis.width-shape.width}, ${shape.height})`);
 
         if (vis.pop_weight){
             let label = vis.legend.append("text")
@@ -383,7 +394,13 @@ class SenateBalance{
      }
 
     highlight_seat(seat){
-        this.svg.select(`#${seat}`).attr("style", "fill:gold");
+        let vis = this;
+
+        vis.svg.select(`#${seat}`).attr("style", "fill:gold");
+        let state = vis.state_info(seat);
+
+        // vis.tooltip[0].text(`<b>${state.state}</b> seat 1`);//.attr("style", "font-weight: bold;");
+        // console.log(state);
     }
 
     clear_seat(seat){

@@ -59,6 +59,7 @@ Promise.all(files)
 function highlight(state){
     senate_balance.highlight_seat(state);
     pop_balance.highlight_seat(state);
+    let number = state.substring(2,3);
     state = senate_balance.state_info(state);
 
     let tilt = state.lean + senate_balance.national_split;
@@ -76,23 +77,31 @@ function highlight(state){
 
     if (tilt > 0){
         tilt = `R+${tilt}`
-    }else{
+    }else if (tilt < 0){
         tilt = `D+${-tilt}`;
+    }else{
+        tilt = 'Tie';
     }
 
     let party;
     if (state.lean > 0){
-        party = "Republican";
+        party = "R";
     }else{
-        party = "Democratic";
+        party = "D";
     }
 
 
 
-    d3.select("#tip").node().innerHTML = `${state.state} is ${Math.abs(state.lean)} more points ${party} than the national average, 
-    which means that its outcome is ${tilt} this election. Therefore, we would expect on average that its ${state.pop.toLocaleString()} residents
-are represented by ${rep}.`
-    d3.select("#tip").node().style.visibility = "visible";
+    d3.select("#tip").node().innerHTML =
+        `<b>${state.state}</b> seat <b>${number}</b>, population <b>${(state.pop/2).toLocaleString()}</b>. Lean relative to nation: <b>${party}+${Math.abs(state.lean)}</b>. 
+Expected outcome in this election: <b>${tilt}</b>.`
+
+    // more points ${party} than the national average,
+    // which means that its outcome is ${tilt} this election. Therefore, we would expect on average that its ${state.pop.toLocaleString()} residents
+// are represented by ${rep}.`
+    d3.select("#tip")
+        .attr("style", "null;")
+    // d3.select("#tip").node().style.visibility = "visible";
 
     // let height = d3.select("#tip").node().getBoundingClientRect().height;
     // d3.select("#tip").node().height = height;
@@ -104,5 +113,8 @@ are represented by ${rep}.`
 function clear(state){
     senate_balance.clear_seat(state);
     pop_balance.clear_seat(state);
-    d3.select("#tip").node().style.visibility = "hidden";
+    d3.select("#tip")
+        .attr("style", "font-weight: bold;")
+        .text("Hover over a cell for more details!");
+    // d3.select("#tip").node().style.visibility = "hidden";
 }

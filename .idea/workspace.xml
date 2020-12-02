@@ -20,6 +20,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -29,10 +34,20 @@
       <option name="presentableId" value="Default" />
       <updated>1606107872293</updated>
       <workItem from="1606107874386" duration="63000" />
+      <workItem from="1606108095202" duration="512000" />
+      <workItem from="1606512066413" duration="951000" />
+      <workItem from="1606942052123" duration="5164000" />
+      <workItem from="1606947299083" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1606946380839">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="304" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606946380839" />
   </component>
 </project>
