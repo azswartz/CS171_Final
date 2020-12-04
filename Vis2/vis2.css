@@ -1,3 +1,7 @@
+/*body{*/
+/*    font-size: 2.5VH;*/
+/*}*/
+
 #national-slider{
     width: 50%;
 }
@@ -11,13 +15,17 @@
     height: 60VH;
 }
 
+#slider-code{
+    padding-bottom: 1VH;
+}
 #tip{
-    font-size: small;
+    font-size: 2.5VH;
 }
 
 .center{
     display: flex;
     justify-content:center;
+    text-align: center;
 }
 
 .box{
@@ -33,17 +41,19 @@
 
 .title{
     font-weight: bold;
+    padding-right: 0.5VW;
     /*text-decoration: underline;*/
 }
 .caption{
     display: inline;
-    font-size: small;
+    font-size: 2VH;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .legend{
-    font-size: small;
+    font-size: 2VH;
+    /*font-size: small;*/
 }
 
 .bluestate{
@@ -63,6 +73,10 @@
 
 .tiptext{
     font-size: 2VH;
+}
+
+.col-lg-6{
+    padding-top: 1VH;
 }
 
 @media (min-width: 992px) {

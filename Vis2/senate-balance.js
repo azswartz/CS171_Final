@@ -19,7 +19,9 @@ class SenateBalance{
             .attr("height", vis.height)
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
-        vis.squaresize = Math.min(vis.width, vis.height) / 20;
+        //520x340 270x330
+        console.log(vis.width, vis.height);
+        vis.squaresize = vis.width / 40;
         vis.bluegroup = [0, 0];
         vis.redgroup = [vis.width - vis.squaresize * 15, 0];
 
@@ -29,7 +31,7 @@ class SenateBalance{
 
         vis.statesquares = {};
 
-        vis.armlength = Math.min(vis.width, vis.height) / 2;
+        vis.armlength = vis.width / 4;
         vis.pivot = [vis.width/2, vis.height/2 + vis.squaresize];
 
         vis.leftarm = vis.svg.append("rect")

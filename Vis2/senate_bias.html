@@ -28,21 +28,20 @@
         </div>
         <div class="col">
             <div class="row">
-                <label for="national-slider">Suppose <div id="national-count" class="box">0%</div> more people vote for
-                the <div id="national-winner" class="box">Democrats</div> than the <div id="national-loser" class="box">Republicans</div>
-                    across the entire nation: </label>
+                <label for="national-slider">Suppose that nation wide, <div id="national-count" class="box">0%</div> more people vote for
+                the <div id="national-winner" class="box">Democrats</div> than the <div id="national-loser" class="box">Republicans</div>: </label>
             </div>
-            <div class="row center" style="padding-bottom: 1VH; border-bottom: dashed">
+            <div class="row center" id="slider-code">
                 <div class="caption">Favoring Democrats</div>
                 <input type="range" min="-10" max="10" value="0" id="national-slider" oninput="sliderUpdate()">
                 <div class="caption">Favoring Republicans</div>
             </div>
 
-            <div class="row" style="padding-top: 1VH">
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="row center">
 
-                        <div class="title">The Expected Number of Senate Seats by Party is:</div> <br>
+                        <div class="title">The Expected Number of Senate Seats by Party is: </div> <br>
                         <div><label><div id="senate-winner" class="box"> Republicans </div> hold majority
                         of <div id="senate-count" class="box"> 26 </div> seats.</label></div>
                     </div>

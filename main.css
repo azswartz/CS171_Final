@@ -1,6 +1,8 @@
 
 body{
     padding: 3vh 5vh 5vh 5vh;
+    background-color: whitesmoke;
+    font-size: 2.5VH;
 }
 
 h1{
@@ -10,23 +12,32 @@ h1{
 }
 
 h2{
-    font-size: 2vh;
+    font-size: 3vh;
     text-align: center;
 }
 
 h3{
     font-size: 3vh;
+    /*color: darkblue;*/
+    color: darkslategray;
     /*padding-top: -2vh;*/
     padding-bottom: 2vh;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     font-weight: bold;
+    border-bottom: dashed;
+    /*font-family: Didot, "Calisto MT", "Times New Roman", serif;*/
+    /*font-family: Palatino, "Book Antiqua", Georgia, serif;*/
 }
 
 .centerdiv{
-    padding-top: 25VH;
+    padding-top: 5VH;
     display: flex;
     align-items:center;
     justify-content:center;
+}
+
+#frontimage{
+    height: 60VH;
 }
 
 .mainbody{

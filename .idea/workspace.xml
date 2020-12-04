@@ -19,8 +19,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final" />
     </key>
@@ -38,6 +42,7 @@
       <workItem from="1606512066413" duration="951000" />
       <workItem from="1606942052123" duration="5164000" />
       <workItem from="1606947299083" duration="17000" />
+      <workItem from="1607031974981" duration="6484000" />
     </task>
     <servers />
   </component>
@@ -45,6 +50,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1607037322559">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607037322559" />
     <state x="304" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1606946380839">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
