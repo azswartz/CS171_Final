@@ -1,6 +1,3 @@
-/*body{*/
-/*    font-size: 2.5VH;*/
-/*}*/
 
 #national-slider{
     width: 50%;
@@ -10,6 +7,7 @@
     width: 100%;
     height: 60VH;
 }
+
 #pop-vis{
     width: 100%;
     height: 60VH;
@@ -18,6 +16,7 @@
 #slider-code{
     padding-bottom: 1VH;
 }
+
 #tip{
     font-size: 2.5VH;
 }
@@ -35,15 +34,14 @@
 }
 
 .highlight{
-    /*display: block;*/
     background-color: AntiqueWhite;
 }
 
 .title{
     font-weight: bold;
     padding-right: 0.5VW;
-    /*text-decoration: underline;*/
 }
+
 .caption{
     display: inline;
     font-size: 2VH;
@@ -53,7 +51,6 @@
 
 .legend{
     font-size: 2VH;
-    /*font-size: small;*/
 }
 
 .bluestate{
