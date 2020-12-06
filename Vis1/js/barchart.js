@@ -166,15 +166,15 @@ class BarChart {
                 .on('mouseover', function(event, d){
                     d3.selectAll("." + vis.state_to_abbrev[d.state])
                         .attr('fill', 'lightblue');
-
+                    let formatComma = d3.format(",");
                     vis.tooltip
                         .style("opacity", 1)
-                        .style("left", event.pageX + 30 + "px")
+                        .style("left", event.pageX + 10 + "px")
                         .style("top", event.pageY + 20 + "px")
                         .html(`
                          <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
                             <h2>${d.state}</h2>
-                            <h4> Population: ${d["pop"]}</h4>      
+                            <h4> Population: ${formatComma(d["pop"])}</h4>      
                             <h4> Distortion: ${Math.round(d["distortion"] * 100) / 100}</h4> 
                         </div>`
                         );
@@ -221,15 +221,15 @@ class BarChart {
                 .on('mouseover', function(event, d){
                     d3.selectAll("." + vis.state_to_abbrev[d.state])
                         .attr('fill', 'lightblue');
-
+                    let formatComma = d3.format(",");
                     vis.tooltip
                         .style("opacity", 1)
-                        .style("left", event.pageX + 30 + "px")
+                        .style("left", event.pageX + 10 + "px")
                         .style("top", event.pageY + 20 + "px")
                         .html(`
-                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
                             <h2>${d.state}</h2>
-                            <h4> Population: ${d["pop"]}</h4>      
+                            <h4> Population: ${formatComma(d["pop"])}</h4>      
                             <h4> Distortion: ${Math.round(d["distortion"] * 100) / 100}</h4> 
                         </div>`
                         );

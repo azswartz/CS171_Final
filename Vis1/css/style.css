@@ -13,7 +13,7 @@
 }
 
 .y-axis-label, .x-axis-label {
-    font-size: 10px;
+    font-size: 12px;
     text-anchor: middle;
 }
 
@@ -38,6 +38,7 @@
 .tooltip h2,h4 {
     text-align: left;
     border-bottom: none;
+    font: 20px sans-serif;
 }
 .tooltip h4 {
     font: 14px sans-serif;

@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e34dc59-564d-43b1-92c2-ffe039a68ba4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Vis1/js/colorkey.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vis1/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vis1/js/barchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/js/barchart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vis1/js/linegraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/js/linegraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vis1/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vis1/state_bias1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/state_bias1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis1b/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1b/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis1b/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1b/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis1b/state_bias2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1b/state_bias2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

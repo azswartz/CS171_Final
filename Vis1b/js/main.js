@@ -1,5 +1,6 @@
 //get relevant data from the csv
 let states = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+let state_to_abbrev = {"Alabama":"AL", "Alaska":"AK", "Arizona":"AZ", "Arkansas":"AR", "California":"CA", "Colorado":"CO", "Connecticut":"CT", "Delaware":"DE", "District of Columbia":"DC", "Florida":"FL", "Georgia":"GA", "Hawaii":"HI", "Idaho":"ID", "Illinois":"IL", "Indiana":"IN", "Iowa":"IA", "Kansas":"KS", "Kentucky":"KY", "Louisiana":"LA", "Maine":"ME", "Maryland":"MD", "Massachusetts":"MA", "Michigan":"MI", "Minnesota":"MN", "Mississippi":"MS", "Missouri":"MO", "Montana":"MT", "Nebraska":"NE", "Nevada":"NV", "New Hampshire":"NH", "New Jersey":"NJ", "New Mexico":"NM", "New York":"NY", "North Carolina":"NC", "North Dakota":"ND", "Ohio":"OH", "Oklahoma":"OK", "Oregon":"OR", "Pennsylvania":"PA", "Rhode Island":"RI", "South Carolina":"SC", "South Dakota":"SD", "Tennessee":"TN", "Texas":"TX", "Utah":"UT", "Vermont":"VT", "Virginia":"VA", "Washington":"WA", "West Virginia":"WV", "Wisconsin":"WI", "Wyoming":"WY", "American Samoa":"AS", "Guam":"GU", "Northern Mariana Islands":"MP", "Puerto Rico":"PR", "U.S. Virgin Islands":"VI"};
 let leanData = {};
 let popData = {};
 let repData = {}
@@ -22,7 +23,7 @@ d3.csv("data/state_partisan_lean.csv", (row) => {
     }
 );
 
-var margin, width, height, svg, x, y, xAxis, yAxis, circleLayer, lineLayer, circles, trendline;
+var margin, width, height, svg, x, y, xAxis, yAxis, circleLayer, lineLayer, circles, trendline, tooltip;
 var dataByState = {};
 function initVis() {
     //get dataByState
@@ -74,6 +75,10 @@ function initVis() {
         .enter()
         .append("circle");
     trendline = lineLayer.append("path").datum([0, width]);
+
+    //tooltip
+    tooltip = d3.select("body").append('div')
+        .attr('class', "tooltip");
 
     // Scales and axes
     x = d3.scaleLinear().domain([-40, 45]).range([0, width]);
@@ -134,6 +139,33 @@ function updateVis(){
 
         //update points
         circles.attr("r", 5)
+            .attr("class", d => state_to_abbrev[d])
+            .on('mouseover', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr('fill', 'gray');
+                let formatComma = d3.format(",");
+                tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX + 10 + "px")
+                    .style("top", event.pageY + 10 + "px")
+                    .html(`
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
+                            <h2>${d}</h2>
+                            <h4> Population: ${formatComma(dataByState[d].population)}</h4>      
+                            <h4> Rightward Lean: ${dataByState[d].lean}%</h4>
+                        </div>`
+                    );
+            })
+            .on('mouseout', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr("fill", "lightgray");
+
+                tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            })
             .transition()
             .attr("cx", d => {
                 return x(dataByState[d].lean);
@@ -163,6 +195,32 @@ function updateVis(){
 
         //update points
         circles.attr("r", 5)
+            .on('mouseover', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr('fill', 'gray');
+                let formatComma = d3.format(",");
+                tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX + 10 + "px")
+                    .style("top", event.pageY + 10 + "px")
+                    .html(`
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
+                            <h2>${d}</h2>
+                            <h4> Population: ${formatComma(dataByState[d].population)}</h4>      
+                            <h4> Rightward Lean: ${dataByState[d].lean}%</h4>
+                        </div>`
+                    );
+            })
+            .on('mouseout', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr("fill", "lightgray");
+
+                tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            })
             .transition()
             .attr("cx", d => {
                 return x(dataByState[d].lean);

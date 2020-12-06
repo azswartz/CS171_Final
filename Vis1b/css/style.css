@@ -7,8 +7,34 @@
 }
 
 .y-axis-label, .x-axis-label {
-    font-size: 10px;
+    font-size: 12px;
     text-anchor: middle;
 }
 
-strong {display: inline !important}
+.container-fluid {
+    margin: 20px;
+    font-size: 2.5VH;
+}
+
+.footnote {
+    font-size: 2VH;
+}
+
+.important {
+    font-size: 3VH;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    font: 20px sans-serif;
+}
+.tooltip h2,h4 {
+    text-align: left;
+    border-bottom: none;
+    font: 20px sans-serif;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+}
+
