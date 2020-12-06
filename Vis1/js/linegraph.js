@@ -20,6 +20,14 @@ class LineGraph {
             .append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
+        //title
+        vis.title = vis.svg.append("text")
+            .attr("x",vis.width/2)
+            .attr("y",10)
+            .attr("font-size",24)
+            .attr("fill","black")
+            .attr("text-anchor","middle");
+
         //tooltip
         vis.tooltip = d3.select("body").append('div')
             .attr('class', "tooltip");
@@ -90,6 +98,8 @@ class LineGraph {
 
     updateVis() {
         let vis = this;
+
+        vis.title.text("Total Distortion Over Time")
 
         vis.svg.append("path")
             .datum(vis.years)
