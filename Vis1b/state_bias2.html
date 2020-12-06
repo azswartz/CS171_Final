@@ -28,35 +28,40 @@
         <div class="col">
             <div class="content">
                 <div class="container-fluid">
-                    <div class="row">
-                        In the visualization below, each dot represents a state. The x-axis is partisan lean in favor of the Republican party.
-                        The y-axis is either state population or Senators per person in that state. The solid line is the line of best fit, and is colored according to the sign of its slope. All data is from 2020.
-                        <button data-toggle="collapse" data-target="#leanExplained" class="footnote">Click here for an explanation of partisan lean</button>
-                        <div id="leanExplained" class="collapse footnote">
-                            If a state has a rightward partisan lean of 5%, then this means that the popularity of the Republican party within that state is approximately 5% higher than the national average.
-                            If a state has a rightward partisan lean of -6%, then this means that the popularity of the Republican party within that state is approximately 6% lower than the national average.
-                        </div>
-                    </div>
-                    <br>
+
                     <form class="form-inline row">
                         <div class="form-group selectbox">
                             <label for="type-select">Y-Axis:</label>
                             &nbsp;
                             <select class="form-control" id="type-select" onchange="updateVis()">
-                                <option value="spp">Senators per person</option>
                                 <option value="pop">Population</option>
+                                <option value="spp">Senators per person</option>
                             </select>
                         </div>
                     </form>
                     <div id="scatterplot" class="row" style="width:100%; height:100%"></div>
+                    <div class="row">
+                        Each dot represents a state, and the solid line is the line of best fit. All data is from 2020.
+<!--                        In the visualization below, each dot represents a state. The x-axis is partisan lean in favor of the Republican party.-->
+<!--                        The y-axis is either state population or Senators per person in that state. The solid line is the line of best fit, and is colored according to the sign of its slope. All data is from 2020.-->
+
+                        <button data-toggle="collapse" data-target="#leanExplained" class="footnote expand-button">Click here for an explanation of partisan lean</button>
+                        <div id="leanExplained" class="collapse footnote">
+                            If a state has a partisan lean of 5%, then this means that the popularity of the Republican party within that state is approximately 5 percentage points higher than the national average.
+                            <br>
+                            If a state has a partisan lean of -6%, then this means that the popularity of the Republican party within that state is approximately 6 percentage points lower than the national average.
+                        </div>
+                    </div>
+                    <br>
                     <div class="row important">
-                        <div>Because of the two Senator policy, left-leaning states are represented by&nbsp;<b id="leftdist"></b>&nbsp;Senators than would be allocated by population,
-                        and right-leaning states are represented by&nbsp;<b id="rightdist"></b>&nbsp;Senators than would be allocated by population.</div>
+                        <div>Because small states have greater Senate power and are more Republican leaning, this gives the Republicans an advantage in the Senate.</div>
+<!--                        <div>Because of the two Senator policy, left-leaning states are represented by&nbsp;<b id="leftdist"></b>&nbsp;Senators than would be allocated by population,-->
+<!--                        and right-leaning states are represented by&nbsp;<b id="rightdist"></b>&nbsp;Senators than would be allocated by population.</div>-->
                     </div>
 
                     <br>
 
-                    <div class="row footnote">To see the effect this has on representation in the Senate, proceed to the next visualization.</div>
+                    <div class="row footnote">To see the effect this has on power control of the Senate, proceed to the next visualization.</div>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ class LineGraph {
         vis.title = vis.svg.append("text")
             .attr("x",vis.width/2)
             .attr("y",10)
-            .attr("font-size",24)
+            .attr("font-size","3VH")
             .attr("fill","black")
             .attr("text-anchor","middle");
 

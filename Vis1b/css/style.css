@@ -20,6 +20,10 @@
     font-size: 2VH;
 }
 
+.expand-button{
+    display: inline-block;
+    margin-left: 10px;
+}
 .important {
     font-size: 3VH;
 }

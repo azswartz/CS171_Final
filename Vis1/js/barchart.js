@@ -35,7 +35,7 @@ class BarChart {
         vis.title = vis.svg.append("text")
             .attr("x",vis.width/2)
             .attr("y",10)
-            .attr("font-size",24)
+            .attr("font-size","3VH")
             .attr("fill","black")
             .attr("text-anchor","middle");
 
@@ -147,7 +147,7 @@ class BarChart {
 
         //update bars
         if(vis.type === "spp"){
-            vis.title.text("Representation Across States in " + vis.year);
+            vis.title.text("Relative Senate Power of a Voter in Each State in " + vis.year);
             vis.totalRepGroup.select("line")
                 .attr("stroke","black")
                 .transition()
@@ -182,8 +182,8 @@ class BarChart {
                         .html(`
                          <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
                             <h2>${d.state}</h2>
-                            <h4> Population: ${formatComma(d["pop"])}</h4>      
-                            <h4> Distortion: ${Math.round(d["distortion"] * 100) / 100}</h4> 
+                            <h4> Population: ${formatComma(d["pop"])}</h4>   
+                            <h4> Senators per Person: ${(2/(d["pop"])).toExponential(2)}</h4>        
                         </div>`
                         );
                 })
@@ -215,7 +215,7 @@ class BarChart {
                 .attr("width", vis.x.bandwidth());
             vis.rectangles.exit().remove();
         } else {
-            vis.title.text("Distortion Across States in " + vis.year);
+            vis.title.text("Distortion in Senate Power in " + vis.year);
             vis.totalRepGroup.select("line")
                 .transition()
                 .attr("opacity", 0);
@@ -292,7 +292,7 @@ class BarChart {
                     return "rotate(-45)"
                 });
         } else {
-            vis.svg.select(".y-axis-label").text("Senators Exceeding Allocation by Population");
+            vis.svg.select(".y-axis-label").text("Distortion (larger value indicates greater power)");
             vis.xAxisGp.transition().attr("transform","translate(0," + vis.y(0) + ")").call(vis.xAxis)
                 .selectAll("text")
                 .text(d => d)

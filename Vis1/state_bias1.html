@@ -28,20 +28,7 @@
         <div class="col">
             <div class="content">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div>The policy of having two Senators per state regardless of population was part of the "Great Compromise" of the Constitutional Convention and benefits states with small population.
-                        Under this policy, citizens in less populous states are more represented in the Senate than citizens in more populous states.
-                        We define a state's <i>distortion</i> to measure the extent to which the two senator policy benefits that state.
-                        The visualization below shows distortion across different states and different periods of time.*
-                        </div>
-                        <button data-toggle="collapse" data-target="#distortionExplained" class="footnote">Click here for more details</button>
-                        <div id="distortionExplained" class="collapse footnote">
-                        The distortion of a state is defined to be 2 minus the number of senators that the state would have if the same total number of U.S. senators were allocated in proportion to state population.
-                        That is to say, the distortion of a given state is
-                            <div class="center">2 - (total # of senators) * (pop. of state) / (total pop.)</div>
-                        States with positive distortion have more senators would be allocated by population, while states with negative distortion have fewer.
-                        </div>
-                    </div>
+
                     <br>
                     <div class="row">
                         <div class="col">
@@ -89,15 +76,29 @@
                             <div id="colorkey" style="display: flex; justify-content: flex-end"></div>
                         </div>
                     </div>
-
                     <div id="barchart" class="row" style="width:100%; height:100%"></div>
-                    <div class="row important">
-                        To achieve zero distortion, we would need to reallocate&nbsp;<b id="distortion"></b>&nbsp;senators across states.<br>
+                    <div class="row">
+                        <div>The policy of having two Senators per state regardless of population gives smaller states a larger proportion of power, which was part of the "Great Compromise" with the House of Representatives (where larger states have more proportionate power).
+                            <!--                        Under this policy, citizens in less populous states are more represented in the Senate than citizens in more populous states.-->
+<!--                            The visualization above shows the distortion (a measure of the increased power a state has due to the population independent distribution) between different states over time.-->
+                            Distortion is a measure of how much giving each state two senators benefits the state as compared to giving each state power proportional to its population.
+                        </div>
+                        <button data-toggle="collapse" data-target="#distortionExplained" class="footnote">Click here for more details</button>
+                        <div id="distortionExplained" class="collapse footnote">
+                            We define a state's <i>distortion</i> to measure the extent to which the two senator policy benefits that state.
+                            The distortion of a state is defined to be 2 minus the number of senators that the state would have if the same total number of U.S. senators were allocated in proportion to state population.
+                            That is to say, the distortion of a given state is
+                            <div class="center">2 - (total # of senators) * (pop. of state) / (total pop.)</div>
+                            States with positive distortion have more senators and therefore more power than would be allocated by population, while states with negative distortion have fewer.
+                        </div>
+                    </div>
+                    <div class="row important" style="padding-top: 1.5VH">
+                        To achieve population equitable power in the Senate, we would need to reallocate&nbsp;<b id="distortion"></b>&nbsp;senators across states.<br>
                         <div>U.S. citizens in&nbsp;<b id="minstate"></b>&nbsp;are represented in the Senate&nbsp;<b id="maxdiscrepancy"></b>&nbsp;times more than citizens in&nbsp;<b id="maxstate"></b>.</div>
                     </div>
                     <hr>
                     <div class="row important">
-                        As demonstrated by the graph below, total distortion has &nbsp;<b>increased</b>&nbsp; over time:
+                        As demonstrated by the graph below, total distortion has&nbsp;<b>increased</b>&nbsp;over time:
                     </div>
                     <div class="row footnote">
                         <button data-toggle="collapse" data-target="#totalDistortionExplained" class="footnote">Click here for more details</button>
@@ -109,7 +110,7 @@
 
                     <div id="linegraph" class="row" style="width:100%; height:100%;"></div>
                     <div class="row footnote">
-                        <div>*Note that for all data, we have ignored issues of voting rights and are simply taking into account total population,
+                        <div>Note that for all data, we have ignored issues of voting rights and are simply taking into account total population,
                             including children, women, slaves, and other members of the population who are/were denied the right to vote.
                             We are also ignoring other more minor historical issues, such as the fact that Massachusetts used to include Maine.
                         </div>

@@ -72,7 +72,7 @@ function initVis() {
     title = svg.append("text")
         .attr("x",width/2)
         .attr("y",10)
-        .attr("font-size",24)
+        .attr("font-size","3VH")
         .attr("fill","black")
         .attr("text-anchor","middle");
 
@@ -118,7 +118,7 @@ function initVis() {
         .attr("class", "x-axis-label")
         .attr("x", width / 2)
         .attr("y", height + 40)
-        .text("% lean toward right");
+        .text("Partisan Lean (positive is to the Republican party, negative is to the Democratic party)");
 
     updateVis();
 
@@ -129,7 +129,7 @@ function updateVis(){
 
     if(type === "spp"){
         //title
-        title.text("Representation vs. Rightward Lean");
+        title.text("Representation vs. Partisan Lean");
 
         //update y-axis
         svg.select(".y-axis-label").text("Senators per person");
@@ -164,8 +164,8 @@ function updateVis(){
                     .html(`
                          <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
                             <h2>${d}</h2>
-                            <h4> Population: ${formatComma(dataByState[d].population)}</h4>      
-                            <h4> Rightward Lean: ${dataByState[d].lean}%</h4>
+                            <h4> Senators per Person: ${(2/(dataByState[d].population)).toExponential(2)}</h4>     
+                            <h4> Partisan Lean: ${dataByState[d].lean}%</h4>
                         </div>`
                     );
             })
@@ -202,7 +202,7 @@ function updateVis(){
             .attr("stroke","gray");
     } else {
         //title
-        title.text("Population vs. Rightward Lean");
+        title.text("Population vs. Partisan Lean");
 
         //update y-axis
         svg.select(".y-axis-label").text("Population");
@@ -236,8 +236,8 @@ function updateVis(){
                     .html(`
                          <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
                             <h2>${d}</h2>
-                            <h4> Population: ${formatComma(dataByState[d].population)}</h4>      
-                            <h4> Rightward Lean: ${dataByState[d].lean}%</h4>
+                            <h4> Population: ${formatComma(dataByState[d].population)}</h4>   
+                            <h4> Partisan Lean: ${dataByState[d].lean}%</h4>
                         </div>`
                     );
             })
