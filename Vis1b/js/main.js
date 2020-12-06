@@ -82,6 +82,7 @@ function initVis() {
     circles = circleLayer.selectAll("circle").data(states)
         .enter()
         .append("circle");
+    circles.attr("class", d => state_to_abbrev[d]);
     trendline = lineLayer.append("path").datum([0, width]);
 
     //tooltip
@@ -152,7 +153,6 @@ function updateVis(){
 
         //update points
         circles.attr("r", 5)
-            .attr("class", d => state_to_abbrev[d])
             .on('mouseover', function(event, d){
                 d3.selectAll("." + state_to_abbrev[d])
                     .attr('fill', "gray");

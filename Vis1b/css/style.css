@@ -28,6 +28,11 @@
     font-size: 3VH;
 }
 
+.detail {
+    margin: auto;
+    width: 95%;
+}
+
 .tooltip {
     position: absolute;
     text-align: center;

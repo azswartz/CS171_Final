@@ -26,6 +26,11 @@
     font-size: 2VH;
 }
 
+.detail {
+    margin: auto;
+    width: 95%;
+}
+
 .important {
     font-size: 3VH;
 }
