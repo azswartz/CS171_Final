@@ -23,7 +23,7 @@ d3.csv("data/state_partisan_lean.csv", (row) => {
     }
 );
 
-var margin, width, height, svg, x, y, xAxis, yAxis, circleLayer, lineLayer, circles, trendline, tooltip;
+var margin, width, height, svg, x, y, xAxis, yAxis, circleLayer, lineLayer, circles, title, trendline, demscale, repscale, tooltip;
 var dataByState = {};
 function initVis() {
     //get dataByState
@@ -68,6 +68,14 @@ function initVis() {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    //vis title
+    title = svg.append("text")
+        .attr("x",width/2)
+        .attr("y",10)
+        .attr("font-size",24)
+        .attr("fill","black")
+        .attr("text-anchor","middle");
+
     //set up circles and trendline
     lineLayer = svg.append("g");
     circleLayer = svg.append("g");
@@ -87,6 +95,8 @@ function initVis() {
         .scale(x);
     yAxis = d3.axisLeft()
         .scale(y);
+    demscale = d3.scaleLinear().domain([0,40]).range(["white","royalblue"]);
+    repscale = d3.scaleLinear().domain([0,45]).range(["white","firebrick"]);
 
     // Append axes
     svg.append("g")
@@ -118,6 +128,9 @@ function updateVis(){
     let type = d3.select("#type-select").property("value");
 
     if(type === "spp"){
+        //title
+        title.text("Representation vs. Rightward Lean");
+
         //update y-axis
         svg.select(".y-axis-label").text("Senators per person");
         y.domain([0, maxRep * 1.05]);
@@ -142,7 +155,7 @@ function updateVis(){
             .attr("class", d => state_to_abbrev[d])
             .on('mouseover', function(event, d){
                 d3.selectAll("." + state_to_abbrev[d])
-                    .attr('fill', 'gray');
+                    .attr('fill', "gray");
                 let formatComma = d3.format(",");
                 tooltip
                     .style("opacity", 1)
@@ -158,7 +171,14 @@ function updateVis(){
             })
             .on('mouseout', function(event, d){
                 d3.selectAll("." + state_to_abbrev[d])
-                    .attr("fill", "lightgray");
+                    .attr("fill", d=>{
+                        let lean = dataByState[d].lean;
+                        if(lean >= 0){
+                            return repscale(lean);
+                        }else{
+                            return demscale(-lean);
+                        }
+                    });
 
                 tooltip
                     .style("opacity", 0)
@@ -171,9 +191,19 @@ function updateVis(){
                 return x(dataByState[d].lean);
             })
             .attr("cy", d => y(2 / dataByState[d].population))
-            .attr("fill", "lightgray")
+            .attr("fill", d=>{
+                let lean = dataByState[d].lean;
+                if(lean >= 0){
+                    return repscale(lean);
+                }else{
+                    return demscale(-lean);
+                }
+            })
             .attr("stroke","gray");
     } else {
+        //title
+        title.text("Population vs. Rightward Lean");
+
         //update y-axis
         svg.select(".y-axis-label").text("Population");
         y.domain([0, maxPop * 1.05]);
@@ -197,7 +227,7 @@ function updateVis(){
         circles.attr("r", 5)
             .on('mouseover', function(event, d){
                 d3.selectAll("." + state_to_abbrev[d])
-                    .attr('fill', 'gray');
+                    .attr('fill', "gray");
                 let formatComma = d3.format(",");
                 tooltip
                     .style("opacity", 1)
@@ -213,7 +243,14 @@ function updateVis(){
             })
             .on('mouseout', function(event, d){
                 d3.selectAll("." + state_to_abbrev[d])
-                    .attr("fill", "lightgray");
+                    .attr('fill', d=>{
+                        let lean = dataByState[d].lean;
+                        if(lean >= 0){
+                            return repscale(lean);
+                        }else{
+                            return demscale(-lean);
+                        }
+                    });
 
                 tooltip
                     .style("opacity", 0)
@@ -228,7 +265,14 @@ function updateVis(){
             .attr("cy", d => {
                 return y(dataByState[d].population);
             })
-            .attr("fill", "lightgray")
+            .attr("fill", d=>{
+                let lean = dataByState[d].lean;
+                if(lean >= 0){
+                    return repscale(lean);
+                }else{
+                    return demscale(-lean);
+                }
+            })
             .attr("stroke","gray");
     }
     svg.select(".x-axis").transition().call(xAxis);

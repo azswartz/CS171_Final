@@ -30,8 +30,12 @@
                 <div class="container-fluid">
                     <div class="row">
                         In the visualization below, each dot represents a state. The x-axis is partisan lean in favor of the Republican party.
-                        For example, if a state has a rightward partisan lean of 5%, then this means that the popularity of the Republican party within that state is approximately 5% higher than the national average.
-                        The y-axis is either state population or Senators per person in that state. The solid line is the line of best fit, and is colored according to the sign of its slope. All data from 2020.
+                        The y-axis is either state population or Senators per person in that state. The solid line is the line of best fit, and is colored according to the sign of its slope. All data is from 2020.
+                        <button data-toggle="collapse" data-target="#leanExplained" class="footnote">Click here for an explanation of partisan lean</button>
+                        <div id="leanExplained" class="collapse footnote">
+                            If a state has a rightward partisan lean of 5%, then this means that the popularity of the Republican party within that state is approximately 5% higher than the national average.
+                            If a state has a rightward partisan lean of -6%, then this means that the popularity of the Republican party within that state is approximately 6% lower than the national average.
+                        </div>
                     </div>
                     <br>
                     <form class="form-inline row">

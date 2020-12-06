@@ -32,6 +32,13 @@ class BarChart {
         vis.totalRepGroup.append("line");
         vis.totalRepGroup.append("text");
 
+        vis.title = vis.svg.append("text")
+            .attr("x",vis.width/2)
+            .attr("y",10)
+            .attr("font-size",24)
+            .attr("fill","black")
+            .attr("text-anchor","middle");
+
 
 
         // Scales and axes
@@ -140,6 +147,7 @@ class BarChart {
 
         //update bars
         if(vis.type === "spp"){
+            vis.title.text("Representation Across States in " + vis.year);
             vis.totalRepGroup.select("line")
                 .attr("stroke","black")
                 .transition()
@@ -207,6 +215,7 @@ class BarChart {
                 .attr("width", vis.x.bandwidth());
             vis.rectangles.exit().remove();
         } else {
+            vis.title.text("Distortion Across States in " + vis.year);
             vis.totalRepGroup.select("line")
                 .transition()
                 .attr("opacity", 0);
