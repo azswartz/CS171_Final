@@ -29,63 +29,77 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        The policy of having two Senators per state regardless of population was part of the "Great Compromise" of the Constitutional Convention.
-                        This means that citizens in smaller states are more represented in the Senate than citizens in more populous states.
-                        The visualization below shows the results of this distortion across different states and different periods of time.*
+                        <div>The policy of having two Senators per state regardless of population was part of the "Great Compromise" of the Constitutional Convention and benefits states with small population.
+                        Under this policy, citizens in less populous states are more represented in the Senate than citizens in more populous states.
+                        We define a state's <i>distortion</i> to be 2 minus the number of senators that the state would have if the same total number of U.S. senators were allocated in proportion to state population.
+                        That is to say, the distortion of a given state is
+                        </div>
+                        <div class="center">2 - (total # of senators) * (pop. of state) / (total pop.)</div>
+                        In other words, distortion measures the extent to which the two senator policy benefits a given state.
+                        The visualization below shows this distortion across different states and different periods of time.*
                     </div>
                     <br>
-                    <form class="form-inline row">
-                        <div class="form-group selectbox">
-                            <label for="year-select">Year:</label>
-                            &nbsp;
-                            <select class="form-control" id="year-select" onchange="updateVisualization()">
-                                <option value="2020">2020</option>
-                                <option value="2010">2010</option>
-                                <option value="2000">2000</option>
-                                <option value="1990">1990</option>
-                                <option value="1980">1980</option>
-                                <option value="1970">1970</option>
-                                <option value="1960">1960</option>
-                                <option value="1950">1950</option>
-                                <option value="1940">1940</option>
-                                <option value="1930">1930</option>
-                                <option value="1920">1920</option>
-                                <option value="1910">1910</option>
-                                <option value="1900">1900</option>
-                                <option value="1890">1890</option>
-                                <option value="1880">1880</option>
-                                <option value="1870">1870</option>
-                                <option value="1860">1860</option>
-                                <option value="1850">1850</option>
-                                <option value="1840">1840</option>
-                                <option value="1830">1830</option>
-                                <option value="1820">1820</option>
-                                <option value="1810">1810</option>
-                                <option value="1800">1800</option>
-                                <option value="1790">1790</option>
-                            </select>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <label for="ranking-type">Viewing:</label>
-                            &nbsp;
-                            <select class="form-control" id="ranking-type" onchange="updateVisualization()">
-                                <option value="spp">Senators per person</option>
-                                <option value="nes">Number of "extra" senators</option>
-                            </select>
-                        </div>
-                    </form>
-                    <div id="barchart" class="row" style="width:100%; height:100%"></div>
                     <div class="row">
-                        To achieve equal representation for each citizen, we would need to reallocate&nbsp;<b id="distortion"></b>&nbsp;senators across states.<br>
+                        <div class="col">
+                            <form class="form-inline row">
+                                <div class="form-group selectbox" style="width=100%">
+                                    <label for="year-select">Year:</label>
+                                    &nbsp;
+                                    <select class="form-control" id="year-select" onchange="updateVisualization()">
+                                        <option value="2020">2020</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1980">1980</option>
+                                        <option value="1970">1970</option>
+                                        <option value="1960">1960</option>
+                                        <option value="1950">1950</option>
+                                        <option value="1940">1940</option>
+                                        <option value="1930">1930</option>
+                                        <option value="1920">1920</option>
+                                        <option value="1910">1910</option>
+                                        <option value="1900">1900</option>
+                                        <option value="1890">1890</option>
+                                        <option value="1880">1880</option>
+                                        <option value="1870">1870</option>
+                                        <option value="1860">1860</option>
+                                        <option value="1850">1850</option>
+                                        <option value="1840">1840</option>
+                                        <option value="1830">1830</option>
+                                        <option value="1820">1820</option>
+                                        <option value="1810">1810</option>
+                                        <option value="1800">1800</option>
+                                        <option value="1790">1790</option>
+                                    </select>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label for="ranking-type">Viewing:</label>
+                                    &nbsp;
+                                    <select class="form-control" id="ranking-type" onchange="updateVisualization()">
+                                        <option value="spp">Senators per person</option>
+                                        <option value="nes">Distortion</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div id="colorkey" style="display: flex; justify-content: flex-end"></div>
+                        </div>
+                    </div>
+
+                    <div id="barchart" class="row" style="width:100%; height:100%"></div>
+                    <div class="row important">
+                        To achieve equal representation per person, we would need to reallocate&nbsp;<b id="distortion"></b>&nbsp;senators across states.<br>
                         <div>U.S. citizens in&nbsp;<b id="minstate"></b>&nbsp;are represented in the Senate&nbsp;<b id="maxdiscrepancy"></b>&nbsp;times more than citizens in&nbsp;<b id="maxstate"></b>.</div>
                     </div>
                     <br>
-                    <div class="row">
-                        *Note that for historical data, we have ignored historical issues of voting rights and are just taking total population into account,
-                        including children and members of the population who were denied right to vote.
+                    <div class="row footnote">
+                        <div>*Note that for all data, we have ignored issues of voting rights and are simply taking into account total population,
+                        including children, women, slaves, and other members of the population who are/were denied the right to vote.
                         We are also ignoring other more minor historical issues, such as the fact that Massachusetts used to include Maine.
-                        These issues aside, this distortion has increased over time, as demonstrated by the graph below:
+                        These issues aside, <i>total distortion</i> has increased over time, where we define total distortion by the number of reallocations needed to achieve equal representation per person (or equivalently, the sum of all positive distortions).
+                        This is demonstrated by the graph below:</div>
                     </div>
-                    <div id="linegraph" class="row" style="width:100%; height:100%"></div>
+                    <div id="linegraph" class="row" style="width:100%; height:100%;"></div>
                 </div>
             </div>
         </div>
@@ -109,5 +123,6 @@
 <script src="js/main.js"></script>
 <script src="js/barchart.js"></script>
 <script src="js/linegraph.js"></script>
+<script src="js/colorkey.js"></script>
 </body>
 </html>
