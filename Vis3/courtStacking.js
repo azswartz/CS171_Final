@@ -294,6 +294,6 @@ class CourtStacking {
                 console.log(d)
                 return `translate(${i * vis.block_w}, 30)`
             });
-        
+
     }
 }
