@@ -78,11 +78,11 @@
 
 @media (min-width: 992px) {
     .col-lg-6:not(:last-child) {
-        border-right: dashed;
+        border-right: 1px solid black;
     }
 }
 @media (max-width: 991px) {
     .col-lg-6:last-child {
-        border-top: dashed;
+        border-top: 1px solid blac;
     }
 }
