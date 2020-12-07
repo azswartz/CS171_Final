@@ -9,14 +9,14 @@
 }
 
 h3 {
-    color: black;
-    font-size: 30px;
-    font-family: "Helvetica Neue";
+    /*color: black;*/
+    font-size: 3VH;
+    /*font-family: "Helvetica Neue";*/
 }
 
 p {
-    font-family: "Helvetica Neue";
-    font-size: 17px;
+    /*font-family: "Helvetica Neue";*/
+    font-size: 2.5VH;
 }
 
 body {
@@ -84,13 +84,13 @@ svg {
 select {
     font-size: 18px;
     background-color: whitesmoke;
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
     border: none;
     border-bottom: 1px solid black;
 }
 
 label {
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
     font-size: 17px;
 }
 

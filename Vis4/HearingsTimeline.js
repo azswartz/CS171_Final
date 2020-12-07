@@ -72,11 +72,11 @@ class HearingsTimeline {
             .attr('class', 'desc-grp');
 
         vis.descGroupDays.append('text')
-            .text('Days between the hearing')
+            .text('Days between the confirmation')
             .attr('x', 0).attr('y', 0)
             .attr('class', 'desc');
         vis.descGroupDays.append('text')
-            .text('and the next elections')
+            .text('and the next election')
             .attr('x', 0).attr('y', 16)
             .attr('class', 'desc');
 

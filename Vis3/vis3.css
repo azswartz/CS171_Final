@@ -3,7 +3,7 @@
 }
 
 .dot-bar-fraction {
-    font-size: 22px;
+    font-size: 3VH;
     font-weight: bold;
     font-family: "Helvetica Neue";
 }
@@ -40,39 +40,39 @@ svg {
 
 h3 {
     text-align: center;
-    color: black;
-    font-size: 30px;
+    /*color: black;*/
+    font-size: 3VH;
     width: 100%;
     border-bottom: none;
     padding-top: 2vh;
     border-top: 1px solid black;
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
 }
 
 p {
-    font-family: "Helvetica Neue";
-    font-size: 17px;
+    /*font-family: "Helvetica Neue";*/
+    font-size: 2.5VH;
 }
 
 .explanation {
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 text {
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
 }
 
 .leg-1 {
-    font-size: 17px;
+    font-size: 2VH;
 }
 
 .leg-text {
-    font-family: "Helvetica Neue";
-    font-size: 15px;
+    /*font-family: "Helvetica Neue";*/
+    font-size: 2VH;
 }
 
 label {
-    font-family: "Helvetica Neue";
-    font-size: 17px;
+    /*font-family: "Helvetica Neue";*/
+    /*font-size: 2VH;*/
 }
