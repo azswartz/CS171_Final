@@ -16,7 +16,7 @@ class HearingsTimeline {
         let parentHeight = $("#" + vis.parentElement).height()
 
         vis.margin = {
-            top: parentHeight*0.21,
+            top: parentHeight*0.19,
             right: parentWidth*0.1,
             bottom: parentHeight*0,
             left: parentWidth*0.12};
@@ -52,7 +52,7 @@ class HearingsTimeline {
         vis.descGroupNom.append('path')
             .attr('class', 'desc-arrow')
             .attr('stroke', '')
-            .attr('d', vis.arrow(0, 65, 50))
+            .attr('d', vis.arrow(0, 60, 45))
 
         vis.descGroupHear = vis.svg.append('g')
             .attr('class', 'desc-grp')
@@ -101,7 +101,7 @@ class HearingsTimeline {
         vis.legend = vis.svg.append('g')
             .attr('class', 'legend');
 
-        vis.rh = 17;
+        vis.rh = vis.height*0.02;
         vis.rw = 70;
 
         vis.legend.append('rect')
@@ -410,7 +410,7 @@ class HearingsTimeline {
         vis.descGroupHear.attr('transform', `translate(${topTimeline.x(topTimeline.hearing_date)}, 
         ${-vis.descGroupHear.node().getBBox().height - 5})`);
 
-        vis.legend.attr('transform', `translate(${topTimeline.x(topTimeline.nomination_date)}, ${-vis.descGroupNom.node().getBBox().height - 2*vis.rh - 20})`);
+        vis.legend.attr('transform', `translate(${topTimeline.x(topTimeline.nomination_date)}, ${-vis.descGroupNom.node().getBBox().height - 2*vis.rh})`);
 
 
         vis.wrangleData();
@@ -456,7 +456,7 @@ class HearingsTimeline {
         vis.descGroupHear.transition().duration(600).attr('transform', `translate(${topTimeline.x(topTimeline.hearing_date)}, 
         ${-vis.descGroupHear.node().getBBox().height - 5})`);
 
-        vis.legend.attr('transform', `translate(${topTimeline.x(topTimeline.nomination_date)}, ${-vis.descGroupNom.node().getBBox().height - 2*vis.rh - 20})`);
+        vis.legend.attr('transform', `translate(${topTimeline.x(topTimeline.nomination_date)}, ${-vis.descGroupNom.node().getBBox().height - 2*vis.rh - vis.height*0.02})`);
 
     }
 }
