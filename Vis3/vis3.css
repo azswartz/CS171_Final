@@ -1,22 +1,78 @@
-svg {
-    background-color: white;
-}
-
 .y-axis path {
     stroke-width: 0px;
 }
 
 .dot-bar-fraction {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
     font-family: "Helvetica Neue";
 }
 
 .vis-3-year {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .vis-3-y-label {
-    font-size: 23px;
+    font-size: 18px;
     font-family: "Helvetica Neue";
+}
+
+body {
+    background-color: #fcfcfc;
+    /*height: 100vh;*/
+    padding-bottom: 0vh;
+    padding-top: 0vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 0;
+}
+
+.container-fluid,
+.mainbody {
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    background-color: #fcfcfc;
+}
+
+h3 {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    width: 100%;
+    border-bottom: none;
+    padding-top: 2vh;
+    border-top: 1px solid black;
+    font-family: "Helvetica Neue";
+}
+
+p {
+    font-family: "Helvetica Neue";
+    font-size: 17px;
+}
+
+.explanation {
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+text {
+    font-family: "Helvetica Neue";
+}
+
+.leg-1 {
+    font-size: 17px;
+}
+
+.leg-text {
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+}
+
+label {
+    font-family: "Helvetica Neue";
+    font-size: 17px;
 }

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e34dc59-564d-43b1-92c2-ffe039a68ba4" name="Default Changelist" comment="" />
+    <list default="true" id="7e34dc59-564d-43b1-92c2-ffe039a68ba4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis3/courtStacking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis3/courtStacking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis3/lower_court_stacking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vis3/lower_court_stacking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis3/vis3.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vis3/vis3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis4/HearingsTimeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis4/HearingsTimeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis4/Vis4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis4/Vis4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis4/supreme_court_stacking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vis4/supreme_court_stacking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis4/vis4.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vis4/vis4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/justice_confirmations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/justice_confirmations.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +25,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kg2N2vwO9nJYzcegR15UB5KcBz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,7 +34,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -44,6 +66,7 @@
       <workItem from="1606947299083" duration="17000" />
       <workItem from="1607031974981" duration="6946000" />
       <workItem from="1607048723204" duration="284000" />
+      <workItem from="1607197143217" duration="48789000" />
     </task>
     <servers />
   </component>
@@ -55,9 +78,19 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607037322559" />
-    <state x="304" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1606946380839">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="2383" y="447" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607283921238">
+      <screen x="1680" y="23" width="2560" height="1057" />
+    </state>
+    <state x="2383" y="447" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.23.2560.1057/0.23.1680.976@1680.23.2560.1057" timestamp="1607283921238" />
+    <state x="686" y="283" width="604" height="548" key="find.popup" timestamp="1607296877873">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="686" y="283" width="604" height="548" key="find.popup/1680.23.2560.1057/0.23.1680.976@0.23.1680.976" timestamp="1607296877873" />
+    <state x="2725" y="305" width="921" height="594" key="find.popup/1680.23.2560.1057/0.23.1680.976@1680.23.2560.1057" timestamp="1607287403543" />
+    <state x="2288" y="28" width="1344" height="1054" key="search.everywhere.popup" timestamp="1607278753226">
+      <screen x="1680" y="23" width="2560" height="1057" />
     </state>
     <state x="304" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606946380839" />
+    <state x="2288" y="28" width="1344" height="1054" key="search.everywhere.popup/1680.23.2560.1057/0.23.1680.976@1680.23.2560.1057" timestamp="1607278753226" />
   </component>
 </project>

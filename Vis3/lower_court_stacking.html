@@ -18,9 +18,6 @@
 <body>
 
 <div class="container-fluid">
-    <div class="row">
-        <h3>Republicans have also partisanly stacked the lower courts to a much greater extent.</h3>
-    </div>
     <div class="row mainbody">
         <div class="col-auto backregion">
             <a href="../Vis4/supreme_court_stacking.html" id="beginbutton">Back</a>
@@ -34,6 +31,20 @@
 
         </div>
     </div>
+    <div class="row justify-content-center">
+        <h3>Republicans have also partisanly stacked the lower courts to a much greater extent</h3>
+        <div class="col explanation">
+            <p>Hello there</p>
+            <label for="orderby">Order by:</label>
+            <select onchange="courtStacking.wrangleData()" class="form-control" id="orderby">
+                <option value="year">Year</option>
+                <option value="referred">Number of referrals</option>
+                <option value="confirmed">Number of confirmations</option>
+                <option value="fraction">Fraction confirmed</option>
+            </select>
+        </div>
+    </div>
+
 </div>
 
 

@@ -18,21 +18,27 @@
 <body>
 
 <div class="container-fluid">
-    <div class="row">
-        <h3>This advantage has allowed Republicans to stack the Supreme Court without fear of political backlash.</h3>
-    </div>
     <div class="row mainbody">
         <div class="col-auto backregion">
             <a href="../Vis2/senate_bias.html" id="beginbutton">Back</a>
         </div>
-        <div class="col" style="width: 75%;">
-            <div class="content" id="vis-4">
-            </div>
-        </div>
-        <div class="col">
+        <div class="col" style="padding-top: 3vh">
+            <h3>This advantage has allowed Republicans to stack the Supreme Court without fear of political backlash</h3>
             <p>This visualization shows the timeline of a Supreme Court Justice's nomination and hearing. The horizontal bars start
             at the nomination date and end at the date of the hearing.</p>
             <p>The topmost bar represents that of Amy Coney Barrett, who was rushed in the senate and approved just before the elections.</p>
+            <div style="border-top: 1px solid black;">
+                <label for="orderby">Order by:</label>
+                <select class="form-control" id="orderby" onchange="hearingsTimeline.wrangleData()">
+                    <option value="nomination_date" selected>Nomination Date</option>
+                    <option value="datediff">Time from nomination to confirmation</option>
+                    <option value="nomination_to_election">Time from nomination to election</option>
+                </select>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content" id="vis-4">
+            </div>
         </div>
         <div class="col-auto forwardregion">
             <a href="../Vis3/lower_court_stacking.html" id="forwardbutton">Next</a>
@@ -54,6 +60,7 @@
 <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
 <!-- own js files -->
 <script src="Vis4.js"></script>
+<script src="../main.js"></script>
 <script src="HearingsTimeline.js"></script>
 
 </body>

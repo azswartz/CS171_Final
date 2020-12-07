@@ -1,4 +1,107 @@
 .timeline-year {
     font-family: "Helvetica Neue";
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#vis-4 {
+    width: 55vw;
+}
+
+h3 {
+    color: black;
+    font-size: 30px;
+    font-family: "Helvetica Neue";
+}
+
+p {
+    font-family: "Helvetica Neue";
+    font-size: 17px;
+}
+
+body {
+    background-color: #fcfcfc;
+    height: 100vh;
+    padding-bottom: 0vh;
+    padding-top: 0vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 0;
+}
+
+svg {
+    background-color: #fcfcfc;
+}
+
+.container-fluid,
+.mainbody {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.tick text {
+    font-size: 12px;
+    font-family: "Helvetica Neue";
+    color: darkgray;
+
+}
+
+.axis path, line {
+    stroke: darkgray;
+}
+
+.to_election {
+    font-size: 12px;
+    font-family: "Helvetica Neue";
+    fill: grey;
+}
+
+.desc {
+    font-size: 15px;
+    dominant-baseline: hanging;
+    text-anchor: middle;
+    fill: dimgrey;
+}
+
+.desc-arrow {
+    stroke-linejoin: round;
+    stroke: dimgrey;
+    fill: none;
+}
+
+.legend-text {
+    dominant-baseline: middle;
+    font-size: 12px;
+    text-anchor: end;
+}
+
+.legend-text-sm {
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+select {
+    font-size: 18px;
+    background-color: whitesmoke;
+    font-family: "Helvetica Neue";
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+label {
+    font-family: "Helvetica Neue";
+    font-size: 17px;
+}
+
+.tooltip-1 {
+    font-family: "Helvetica Neue";
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.tooltip-2 {
+    dominant-baseline: hanging;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
 }
