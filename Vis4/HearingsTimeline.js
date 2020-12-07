@@ -16,8 +16,8 @@ class HearingsTimeline {
         let parentHeight = $("#" + vis.parentElement).height()
 
         vis.margin = {
-            top: parentHeight*0.19,
-            right: parentWidth*0.13,
+            top: parentHeight*0.22,
+            right: parentWidth*0.16,
             bottom: parentHeight*0,
             left: parentWidth*0.12};
         vis.width = parentWidth - vis.margin.left - vis.margin.right;
