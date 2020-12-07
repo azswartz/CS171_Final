@@ -1,15 +1,21 @@
 
 class SenateBalance{
+    //creates a senate balance visualization
+
     constructor(container, state_data, pop_weight){
         this.container = container;
         this.state_data = state_data;
         this.pop_weight = pop_weight;
+
+        //if pop_weight is True, weight each seat by the population of that seat. Otherwise, each seat is the same size.
+
         this.initVis();
     }
 
     initVis(){
         let vis = this;
 
+        //create canvas
         vis.margin = {top: 10, right: 10, bottom: 20, left: 20};
         vis.width = $("#" + vis.container).width() - vis.margin.left - vis.margin.right;
         vis.height = $("#" + vis.container).height() - vis.margin.top - vis.margin.bottom;
@@ -19,21 +25,25 @@ class SenateBalance{
             .attr("height", vis.height)
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
 
-        // vis.squaresize = vis.width / 40;
+
+        //square size, cluster locations on canvas
         vis.squaresize = Math.min(vis.height / 20, vis.width / 40);
         vis.bluegroup = [0, 0];
         vis.redgroup = [vis.width - vis.squaresize * 15, 0];
 
+        //total population and population represented by each square
         vis.total_pop = 0;
         vis.state_data.forEach(d=> vis.total_pop += d.pop);
         vis.squarepop = vis.total_pop / 100;
 
-        vis.statesquares = {};
+        vis.statesquares = {}; //references for each square's code
 
-        // vis.armlength = vis.width / 4;
+        //length of arm and location of pivot
         vis.armlength = Math.min(vis.height / 2.2, vis.width / 4);
         vis.pivot = [vis.width/2, vis.height/2 + vis.squaresize];
 
+
+        //draw the parts of the scale
         vis.leftarm = vis.svg.append("rect")
                 .attr("x", vis.pivot[0] - vis.armlength)
                 .attr("y", vis.pivot[1] -vis.squaresize/4)
@@ -47,7 +57,6 @@ class SenateBalance{
             .attr("width", vis.armlength)
             .attr("height", vis.squaresize/2)
             .attr("class", "balance");
-
 
         vis.leftbrace = vis.svg.append("rect")
             .attr("x", vis.pivot[0] - vis.armlength - 5*vis.squaresize)
@@ -81,6 +90,7 @@ class SenateBalance{
             .attr("r", vis.squaresize/2)
             .attr("class", "balance");
 
+        //scales to translate from lean to angle
         vis.scaledegs = d3.scaleLinear()
             .domain([-60,60])
             .range([60,-60]);
@@ -91,21 +101,12 @@ class SenateBalance{
         vis.squaregroup = vis.svg.append("g")
             .attr("id", "squaregroup");
 
+
+        //creates the text legend in the corner
         vis.legend = vis.svg.append("g")
             .attr("class", "legend");
 
-        // let tooltip = vis.svg.append("g").attr("class", "tipbox");
-        // let text = tooltip.append("foreignObject")
-        //     .attr("x", 20)
-        //     .attr("y", 20)
-        //     .attr("width", 100)
-        //     .attr("height", 100)
-        // text.node().innerHTML = "<b>Hover here!</b>";
-        // vis.tooltip = [tooltip.append("text").attr("class", "tiptext").text("Hover over cell for details")];
-        // let shape = text.node().getBBox();
-        // console.log(shape);
-        // tooltip.attr("transform", `translate(${vis.width-shape.width}, ${shape.height})`);
-
+        //adds the text with default values and translates it
         if (vis.pop_weight){
             let label = vis.legend.append("text")
                 .text("Each square is one senate seat, where size is");
@@ -137,28 +138,30 @@ class SenateBalance{
         }
 
 
-        this.wrangleData(0);
+        this.wrangleData(0); //parses the data with default split
     }
 
     wrangleData(national_split) {
         let vis = this;
 
+        //national split is how the national vote turned out.
         vis.national_split = national_split;
 
+        //number of seats by party and number of constituents by party
         vis.redcount = 0;
         vis.bluecount = 0;
         vis.redpop = 0;
         vis.bluepop = 0;
 
         vis.mapped_states = vis.state_data.map(d => {
-
+            //for each seat, take the lean in the election and determine which party controls each seat
             let lean = vis.national_split + d.lean;
             let seat1 = d.abbreviation + "1";
             let seat2 = d.abbreviation + "2";
-            let color1, color2;
-            let group1, group2;
-            let pos1, pos2;
-            let poprange1, poprange2;
+            let color1, color2; //red or blue
+            let group1, group2; //red side or blue side of balance
+            let pos1, pos2; //location within the side of the balance
+            let poprange1, poprange2; //population range of the seat within the list of seat
 
             if (lean > 0) {
                 pos1 = vis.redcount;
@@ -207,9 +210,11 @@ class SenateBalance{
 
     updateVis(){
         let vis = this;
+        //draws the visualization
 
         vis.pop_starts = [[0,0],[0,0]];
 
+        //determines the angle of the balance
         let tilt;
         if (vis.pop_weight){
             tilt = (vis.bluepop - vis.redpop) / (vis.bluepop + vis.redpop) * 100;
@@ -217,6 +222,7 @@ class SenateBalance{
             tilt = vis.bluecount - vis.redcount;
         }
 
+        //draws the scale at an angle
         vis.rightarm.transition().duration(500).attr("transform", `rotate(${vis.scaledegs(tilt)}, ${vis.pivot[0]}, ${vis.pivot[1]})`);
         vis.leftarm.transition().duration(500).attr("transform", `rotate(${vis.scaledegs(tilt)}, ${vis.pivot[0]}, ${vis.pivot[1]})`);
 
@@ -244,6 +250,7 @@ class SenateBalance{
             .attr("cx", vis.righthold[0])
             .attr("cy", vis.righthold[1]);
 
+        //determines where to draw the squares based on where the balance is
         vis.bluegroup[0] =vis.lefthold[0] - 5 * vis.squaresize;
         vis.bluegroup[1] = vis.lefthold[1] - 10 * vis.squaresize;
         vis.redgroup[0] = vis.righthold[0] - 5 * vis.squaresize
@@ -251,7 +258,9 @@ class SenateBalance{
 
         vis.mapped_states.forEach(d =>{
             let [state, seat1, seat2, pos1, pos2, color1, color2, group1, group2, poprange1, poprange2] = d;
+            //draw each seat
 
+            //the red seats are drawn in the backward order so they meet at the middle
             if (color1 === "redstate"){
                 pos1 = vis.redcount - pos1 - 1;
                 poprange1 = [vis.redpop - poprange1[1], vis.redpop - poprange1[0]];
@@ -261,6 +270,7 @@ class SenateBalance{
                 poprange2 = [vis.redpop - poprange2[1], vis.redpop - poprange2[0]];
             }
 
+            //if the seat hasn't been drawn before, draw it now and save its code.
             if (!(seat1 in vis.statesquares)) {
                 vis.statesquares[seat1] = vis.squaregroup.append("path").attr("id", seat1);
                 vis.drawsquares(vis.statesquares[seat1], group1, pos1, color1, false, poprange1);
@@ -278,16 +288,20 @@ class SenateBalance{
                     .on('mouseout',  event =>clear(event.target.id))
             }
 
+            //otherwise take the already drawn square and update it
             vis.drawsquares(vis.statesquares[seat1], group1, pos1, color1, true, poprange1);
             vis.drawsquares(vis.statesquares[seat2], group2, pos2, color2, true, poprange2);
         })
 
+        //update the text to show who won
         if (vis.bluecount >= vis.redcount) {
             if (vis.pop_weight){
+                //for population weight
                 let sep = Math.round(vis.bluepop / (vis.bluepop + vis.redpop) * 100);
                 sep = sep - (100-sep);
                 d3.select("#majority-rep").text(`${sep}%`);
             }else{
+                //for seat weight
                 d3.select("#senate-winner").text("Democrats");
                 d3.select("#senate-loser").text("Republicans");
                 d3.select("#senate-count").text(`${vis.bluecount - vis.redcount}`);
@@ -312,6 +326,7 @@ class SenateBalance{
             vis.rightlabel.text(`The Republicans have ${vis.redcount} seats.`)
         }
 
+        //move the text legend out of the way
         let legend_width = vis.legend.node().getBBox().width;
         let legend_height = vis.legend.node().getBBox().height;
         if (tilt > 0) {
@@ -323,26 +338,33 @@ class SenateBalance{
 
     drawsquares(square, group, position, color, transition, poprange){
         let vis = this;
+        //takes the square and puts it in the correct shape and place
 
         let start, moves;
 
         if (vis.pop_weight) {
+            //if the visualization is population weighted
+
+            //population range the state takes
             poprange = [poprange[0] / vis.squarepop, poprange[1] / vis.squarepop];
 
+            //where the seat starts
             let row = Math.floor(poprange[0] / 10);
             let col = poprange[0] - 10 * row;
 
+            //seats are arranged in a boustrophedon order
             let flip = 1;
             if (row % 2 == 1){
                 flip = -1;
                 col = 10 - col;
             }
 
+            //get the location of the start of the seat
             start = [group[0] + col*vis.squaresize, group[1] + (9-row) *vis.squaresize];
 
             let endrow = Math.floor(poprange[1] / 10);
 
-
+            //get the moves necessary to fill out the seat, moving onto the next line if necessary
             if (row == endrow){
                 moves = [
                     [flip *(poprange[1] - poprange[0])*vis.squaresize, 0],
@@ -362,10 +384,12 @@ class SenateBalance{
             }
 
         }else{
+            // if each seat is the same size, this is much easier.
             let col = position%10;
             let row = Math.floor((position)/10);
             let flip = 1;
 
+            //seats are still arranged boustrophedon
             if (row % 2 == 0){
                 flip = -1;
                 col = 9 - col;
@@ -379,14 +403,17 @@ class SenateBalance{
             ];
         }
 
+        //draw each seat as a path
         let path = `M${start[0]} ${start[1]} `;
         moves.forEach(d =>{
             path = path + `l${d[0]} ${d[1]} `
         })
         path = path + "Z";
 
+        //give it the color
         square.attr("class", color);
 
+        //draw the path and add a transition if requested
         if (transition){
             square.transition().duration(500).attr("d", path);
         }
@@ -398,18 +425,19 @@ class SenateBalance{
     highlight_seat(seat){
         let vis = this;
 
+        //color the seat gold
         vis.svg.select(`#${seat}`).attr("style", "fill:gold");
         let state = vis.state_info(seat);
 
-        // vis.tooltip[0].text(`<b>${state.state}</b> seat 1`);//.attr("style", "font-weight: bold;");
-        // console.log(state);
     }
 
     clear_seat(seat){
+        //return to the original color
         this.svg.select(`#${seat}`).attr("style", "none");
     }
 
     state_info(state){
+        //gets the full information for a state from its seat id
         state = state.substring(0,2);
         let full;
         this.state_data.forEach(d =>{

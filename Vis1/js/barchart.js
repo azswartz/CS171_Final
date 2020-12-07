@@ -7,6 +7,7 @@ class BarChart {
         this.displayDataByState;
         this.year = "2020";
         this.type = "spp"
+        this.state_to_abbrev = {"Alabama":"AL", "Alaska":"AK", "Arizona":"AZ", "Arkansas":"AR", "California":"CA", "Colorado":"CO", "Connecticut":"CT", "Delaware":"DE", "District of Columbia":"DC", "Florida":"FL", "Georgia":"GA", "Hawaii":"HI", "Idaho":"ID", "Illinois":"IL", "Indiana":"IN", "Iowa":"IA", "Kansas":"KS", "Kentucky":"KY", "Louisiana":"LA", "Maine":"ME", "Maryland":"MD", "Massachusetts":"MA", "Michigan":"MI", "Minnesota":"MN", "Mississippi":"MS", "Missouri":"MO", "Montana":"MT", "Nebraska":"NE", "Nevada":"NV", "New Hampshire":"NH", "New Jersey":"NJ", "New Mexico":"NM", "New York":"NY", "North Carolina":"NC", "North Dakota":"ND", "Ohio":"OH", "Oklahoma":"OK", "Oregon":"OR", "Pennsylvania":"PA", "Rhode Island":"RI", "South Carolina":"SC", "South Dakota":"SD", "Tennessee":"TN", "Texas":"TX", "Utah":"UT", "Vermont":"VT", "Virginia":"VA", "Washington":"WA", "West Virginia":"WV", "Wisconsin":"WI", "Wyoming":"WY", "American Samoa":"AS", "Guam":"GU", "Northern Mariana Islands":"MP", "Puerto Rico":"PR", "U.S. Virgin Islands":"VI"};
         this.initVis();
     }
 
@@ -27,6 +28,16 @@ class BarChart {
             .append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
         vis.barGroup = vis.svg.append("g");
+        vis.totalRepGroup = vis.svg.append("g");
+        vis.totalRepGroup.append("line");
+        vis.totalRepGroup.append("text");
+
+        vis.title = vis.svg.append("text")
+            .attr("x",vis.width/2)
+            .attr("y",10)
+            .attr("font-size","3VH")
+            .attr("fill","black")
+            .attr("text-anchor","middle");
 
 
 
@@ -57,6 +68,10 @@ class BarChart {
             .attr("y",-50)
             .attr("transform","rotate(-90)")
             .text("here I am");
+
+        //tooltip group
+        vis.tooltip = d3.select("body").append('div')
+            .attr('class', "tooltip");
 
         vis.wrangleData();
     }
@@ -98,6 +113,8 @@ class BarChart {
                 distortion += vis.displayData[i]["distortion"];
             }
         }
+        vis.totalRep = 2 * n / pop;
+        //console.log(vis.totalRep);
         let minState = vis.filteredData[0];
         let maxState = vis.filteredData[n - 1];
         $("#minstate").html(minState.State);
@@ -130,10 +147,60 @@ class BarChart {
 
         //update bars
         if(vis.type === "spp"){
+            vis.title.text("Relative Senate Power of a Voter in Each State in " + vis.year);
+            vis.totalRepGroup.select("line")
+                .attr("stroke","black")
+                .transition()
+                .attr("opacity", 1)
+                .attr('class', "dashed")
+                .attr('x1', 0)
+                .attr('y1', vis.y(vis.totalRep))
+                .attr('x2', vis.width)
+                .attr('y2', vis.y(vis.totalRep));
+            vis.totalRepGroup.select("text")
+                .transition()
+                .attr("x", vis.width)
+                .attr("y", vis.y(vis.totalRep) - 5)
+                .attr("fill", "black")
+                .attr("text-anchor", "end")
+                .attr("opacity", 1)
+                .attr("font-size",12)
+                .text("(total senators) / (total population)");
             vis.rectangles = vis.barGroup.selectAll("rect").data(vis.displayData);
             vis.rectangles.enter()
                 .append("rect")
                 .merge(vis.rectangles)
+                .attr("class", d=> vis.state_to_abbrev[d.state])
+                .on('mouseover', function(event, d){
+                    d3.selectAll("." + vis.state_to_abbrev[d.state])
+                        .attr('fill', 'lightblue');
+                    let formatComma = d3.format(",");
+                    vis.tooltip
+                        .style("opacity", 1)
+                        .style("left", event.pageX + 10 + "px")
+                        .style("top", event.pageY + 20 + "px")
+                        .html(`
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
+                            <h2>${d.state}</h2>
+                            <h4> Population: ${formatComma(d["pop"])}</h4>   
+                            <h4> Senators per Person: ${(2/(d["pop"])).toExponential(2)}</h4>        
+                        </div>`
+                        );
+                })
+                .on('mouseout', function(event, d){
+                    d3.selectAll("." + vis.state_to_abbrev[d.state])
+                        .attr("fill", d => {
+                            if(d.distortion > 0)
+                                return vis.colorPos(d.distortion);
+                            return vis.colorNeg(d.distortion);
+                        });
+
+                    vis.tooltip
+                        .style("opacity", 0)
+                        .style("left", 0)
+                        .style("top", 0)
+                        .html(``);
+                })
                 .transition()
                 .attr("fill", d => {
                     if(d.distortion > 0)
@@ -147,27 +214,49 @@ class BarChart {
                 .attr("height", d => vis.height - vis.y(2 / d.pop))
                 .attr("width", vis.x.bandwidth());
             vis.rectangles.exit().remove();
-
-            /*vis.barlabels = vis.svg.selectAll(".bar-label").data(vis.displayData);
-            vis.barlabels.enter()
-                .append("text")
-                .attr("class","bar-label")
-                .merge(vis.barlabels)
-                .transition()
-                .attr("fill", "darkgray")
-                .attr("text-anchor","middle")
-                .attr("x",d => vis.x(d.state) + vis.x.bandwidth() / 2)
-                .attr("y",d => vis.y(2 / d.pop) - 5)
-                .text(d => {
-                    if(d.distortion > 0) return "+" + Math.round(d.distortion * 10) / 10;
-                    else return Math.round(d.distortion * 10) / 10;
-                });
-            vis.barlabels.exit().remove();*/
         } else {
+            vis.title.text("Distortion in Senate Power in " + vis.year);
+            vis.totalRepGroup.select("line")
+                .transition()
+                .attr("opacity", 0);
+            vis.totalRepGroup.select("text")
+                .transition()
+                .attr("opacity", 0);
             vis.rectangles = vis.barGroup.selectAll("rect").data(vis.displayData);
             vis.rectangles.enter()
                 .append("rect")
                 .merge(vis.rectangles)
+                .attr("class", d=> vis.state_to_abbrev[d.state])
+                .on('mouseover', function(event, d){
+                    d3.selectAll("." + vis.state_to_abbrev[d.state])
+                        .attr('fill', 'lightblue');
+                    let formatComma = d3.format(",");
+                    vis.tooltip
+                        .style("opacity", 1)
+                        .style("left", event.pageX + 10 + "px")
+                        .style("top", event.pageY + 20 + "px")
+                        .html(`
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
+                            <h2>${d.state}</h2>
+                            <h4> Population: ${formatComma(d["pop"])}</h4>      
+                            <h4> Distortion: ${Math.round(d["distortion"] * 100) / 100}</h4> 
+                        </div>`
+                        );
+                })
+                .on('mouseout', function(event, d){
+                    d3.selectAll("." + vis.state_to_abbrev[d.state])
+                        .attr("fill", d => {
+                            if(d.distortion > 0)
+                                return vis.colorPos(d.distortion);
+                            return vis.colorNeg(d.distortion);
+                        });
+
+                    vis.tooltip
+                        .style("opacity", 0)
+                        .style("left", 0)
+                        .style("top", 0)
+                        .html(``);
+                })
                 .transition()
                 .attr("fill", d => {
                     if(d.distortion > 0)
@@ -188,9 +277,7 @@ class BarChart {
                 .attr("width", vis.x.bandwidth());
             vis.rectangles.exit().remove();
 
-            vis.barlabels = vis.svg.selectAll(".bar-label").remove();
         }
-
 
         // Update axes
         if(vis.type === "spp"){
@@ -205,7 +292,7 @@ class BarChart {
                     return "rotate(-45)"
                 });
         } else {
-            vis.svg.select(".y-axis-label").text("Senators Exceeding Allocation by Population");
+            vis.svg.select(".y-axis-label").text("Distortion (larger value indicates greater power)");
             vis.xAxisGp.transition().attr("transform","translate(0," + vis.y(0) + ")").call(vis.xAxis)
                 .selectAll("text")
                 .text(d => d)

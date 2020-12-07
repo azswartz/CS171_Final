@@ -2,11 +2,54 @@
     padding-left: 10px;
 }
 
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
 .bar-label {
     font-size: 8px;
 }
 
 .y-axis-label, .x-axis-label {
-    font-size: 10px;
+    font-size: 12px;
     text-anchor: middle;
 }
+
+.container-fluid {
+    margin: 20px;
+    font-size: 2.5VH;
+}
+
+.footnote {
+    font-size: 2VH;
+}
+
+.detail {
+    margin: auto;
+    width: 95%;
+}
+
+.important {
+    font-size: 3VH;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    font: 20px sans-serif;
+}
+.tooltip h2,h4 {
+    text-align: left;
+    border-bottom: none;
+    font: 20px sans-serif;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+}
+
+.dashed{
+    stroke-dasharray: 5,5;
+}
+

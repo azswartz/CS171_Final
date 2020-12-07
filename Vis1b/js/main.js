@@ -1,5 +1,6 @@
 //get relevant data from the csv
 let states = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
+let state_to_abbrev = {"Alabama":"AL", "Alaska":"AK", "Arizona":"AZ", "Arkansas":"AR", "California":"CA", "Colorado":"CO", "Connecticut":"CT", "Delaware":"DE", "District of Columbia":"DC", "Florida":"FL", "Georgia":"GA", "Hawaii":"HI", "Idaho":"ID", "Illinois":"IL", "Indiana":"IN", "Iowa":"IA", "Kansas":"KS", "Kentucky":"KY", "Louisiana":"LA", "Maine":"ME", "Maryland":"MD", "Massachusetts":"MA", "Michigan":"MI", "Minnesota":"MN", "Mississippi":"MS", "Missouri":"MO", "Montana":"MT", "Nebraska":"NE", "Nevada":"NV", "New Hampshire":"NH", "New Jersey":"NJ", "New Mexico":"NM", "New York":"NY", "North Carolina":"NC", "North Dakota":"ND", "Ohio":"OH", "Oklahoma":"OK", "Oregon":"OR", "Pennsylvania":"PA", "Rhode Island":"RI", "South Carolina":"SC", "South Dakota":"SD", "Tennessee":"TN", "Texas":"TX", "Utah":"UT", "Vermont":"VT", "Virginia":"VA", "Washington":"WA", "West Virginia":"WV", "Wisconsin":"WI", "Wyoming":"WY", "American Samoa":"AS", "Guam":"GU", "Northern Mariana Islands":"MP", "Puerto Rico":"PR", "U.S. Virgin Islands":"VI"};
 let leanData = {};
 let popData = {};
 let repData = {}
@@ -22,7 +23,7 @@ d3.csv("data/state_partisan_lean.csv", (row) => {
     }
 );
 
-var margin, width, height, svg, x, y, xAxis, yAxis, circleLayer, lineLayer, circles, trendline;
+var margin, width, height, svg, x, y, xAxis, yAxis, circleLayer, lineLayer, circles, title, trendline, demscale, repscale, tooltip;
 var dataByState = {};
 function initVis() {
     //get dataByState
@@ -67,13 +68,26 @@ function initVis() {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    //vis title
+    title = svg.append("text")
+        .attr("x",width/2)
+        .attr("y",10)
+        .attr("font-size","3VH")
+        .attr("fill","black")
+        .attr("text-anchor","middle");
+
     //set up circles and trendline
     lineLayer = svg.append("g");
     circleLayer = svg.append("g");
     circles = circleLayer.selectAll("circle").data(states)
         .enter()
         .append("circle");
+    circles.attr("class", d => state_to_abbrev[d]);
     trendline = lineLayer.append("path").datum([0, width]);
+
+    //tooltip
+    tooltip = d3.select("body").append('div')
+        .attr('class', "tooltip");
 
     // Scales and axes
     x = d3.scaleLinear().domain([-40, 45]).range([0, width]);
@@ -82,6 +96,8 @@ function initVis() {
         .scale(x);
     yAxis = d3.axisLeft()
         .scale(y);
+    demscale = d3.scaleLinear().domain([0,40]).range(["white","royalblue"]);
+    repscale = d3.scaleLinear().domain([0,45]).range(["white","firebrick"]);
 
     // Append axes
     svg.append("g")
@@ -103,7 +119,7 @@ function initVis() {
         .attr("class", "x-axis-label")
         .attr("x", width / 2)
         .attr("y", height + 40)
-        .text("% lean toward right");
+        .text("Partisan Lean (positive is to the Republican party, negative is to the Democratic party)");
 
     updateVis();
 
@@ -113,6 +129,9 @@ function updateVis(){
     let type = d3.select("#type-select").property("value");
 
     if(type === "spp"){
+        //title
+        title.text("Representation vs. Partisan Lean");
+
         //update y-axis
         svg.select(".y-axis-label").text("Senators per person");
         y.domain([0, maxRep * 1.05]);
@@ -134,14 +153,57 @@ function updateVis(){
 
         //update points
         circles.attr("r", 5)
+            .on('mouseover', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr('fill', "gray");
+                let formatComma = d3.format(",");
+                tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX + 10 + "px")
+                    .style("top", event.pageY + 10 + "px")
+                    .html(`
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
+                            <h2>${d}</h2>
+                            <h4> Senators per Person: ${(2/(dataByState[d].population)).toExponential(2)}</h4>     
+                            <h4> Partisan Lean: ${dataByState[d].lean}%</h4>
+                        </div>`
+                    );
+            })
+            .on('mouseout', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr("fill", d=>{
+                        let lean = dataByState[d].lean;
+                        if(lean >= 0){
+                            return repscale(lean);
+                        }else{
+                            return demscale(-lean);
+                        }
+                    });
+
+                tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            })
             .transition()
             .attr("cx", d => {
                 return x(dataByState[d].lean);
             })
             .attr("cy", d => y(2 / dataByState[d].population))
-            .attr("fill", "lightgray")
+            .attr("fill", d=>{
+                let lean = dataByState[d].lean;
+                if(lean >= 0){
+                    return repscale(lean);
+                }else{
+                    return demscale(-lean);
+                }
+            })
             .attr("stroke","gray");
     } else {
+        //title
+        title.text("Population vs. Partisan Lean");
+
         //update y-axis
         svg.select(".y-axis-label").text("Population");
         y.domain([0, maxPop * 1.05]);
@@ -163,6 +225,39 @@ function updateVis(){
 
         //update points
         circles.attr("r", 5)
+            .on('mouseover', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr('fill', "gray");
+                let formatComma = d3.format(",");
+                tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX + 10 + "px")
+                    .style("top", event.pageY + 10 + "px")
+                    .html(`
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
+                            <h2>${d}</h2>
+                            <h4> Population: ${formatComma(dataByState[d].population)}</h4>   
+                            <h4> Partisan Lean: ${dataByState[d].lean}%</h4>
+                        </div>`
+                    );
+            })
+            .on('mouseout', function(event, d){
+                d3.selectAll("." + state_to_abbrev[d])
+                    .attr('fill', d=>{
+                        let lean = dataByState[d].lean;
+                        if(lean >= 0){
+                            return repscale(lean);
+                        }else{
+                            return demscale(-lean);
+                        }
+                    });
+
+                tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            })
             .transition()
             .attr("cx", d => {
                 return x(dataByState[d].lean);
@@ -170,7 +265,14 @@ function updateVis(){
             .attr("cy", d => {
                 return y(dataByState[d].population);
             })
-            .attr("fill", "lightgray")
+            .attr("fill", d=>{
+                let lean = dataByState[d].lean;
+                if(lean >= 0){
+                    return repscale(lean);
+                }else{
+                    return demscale(-lean);
+                }
+            })
             .attr("stroke","gray");
     }
     svg.select(".x-axis").transition().call(xAxis);

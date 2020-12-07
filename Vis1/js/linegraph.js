@@ -20,6 +20,18 @@ class LineGraph {
             .append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
+        //title
+        vis.title = vis.svg.append("text")
+            .attr("x",vis.width/2)
+            .attr("y",10)
+            .attr("font-size","3VH")
+            .attr("fill","black")
+            .attr("text-anchor","middle");
+
+        //tooltip
+        vis.tooltip = d3.select("body").append('div')
+            .attr('class', "tooltip");
+
         // Scales and axes
         vis.x = d3.scaleLinear().domain([1790,2020]).range([0,vis.width]);
         vis.y = d3.scaleLinear().domain([0,40]).range([vis.height,0]);
@@ -43,7 +55,7 @@ class LineGraph {
             .attr("x", -vis.height / 2)
             .attr("y",-50)
             .attr("transform","rotate(-90)")
-            .text("Reallocations Needed to Achieve Equal Representation");
+            .text("Total Distortion");
 
         vis.wrangleData();
     }
@@ -87,11 +99,13 @@ class LineGraph {
     updateVis() {
         let vis = this;
 
+        vis.title.text("Total Distortion Over Time")
+
         vis.svg.append("path")
             .datum(vis.years)
             .attr("fill", "none")
             .attr("stroke", "steelblue")
-            .attr("stroke-width", 1.5)
+            .attr("stroke-width", 3)
             .attr("d", d3.line()
                 .x(function (d) {
                     return vis.x(d);
@@ -105,11 +119,35 @@ class LineGraph {
             .data(vis.years)
             .enter()
             .append("circle")
+            .attr("class", d => "year" + d)
             .attr("fill", "gray")
-            .attr("stroke", "none")
+            .attr("stroke", "gray")
             .attr("cx", d => vis.x(d))
             .attr("cy", d => vis.y(vis.distortion[d]))
-            .attr("r", 4);
+            .attr("r", 5)
+            .on('mouseover', function(event, d){
+                d3.select(".year" + d).attr('fill', 'yellow');
+
+                vis.tooltip
+                    .style("opacity", 1)
+                    .style("left", event.pageX + 10 + "px")
+                    .style("top", event.pageY + 20 + "px")
+                    .html(`
+                         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
+                            <h2>${d}</h2>
+                            <h4>Total distortion: ${Math.round(vis.distortion[d] * 100)/100}</h4>      
+                        </div>`
+                    );
+            })
+            .on('mouseout', function(event, d){
+                d3.select(".year" + d).attr("fill","gray");
+
+                vis.tooltip
+                    .style("opacity", 0)
+                    .style("left", 0)
+                    .style("top", 0)
+                    .html(``);
+            });
 
         vis.svg.select(".y-axis").call(vis.yAxis);
         vis.svg.select(".x-axis").call(vis.xAxis);

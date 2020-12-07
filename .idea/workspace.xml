@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
+=======
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+>>>>>>> fd66221759a9ef17c29ae4fe0180633832cc1d49
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e34dc59-564d-43b1-92c2-ffe039a68ba4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Vis3/courtStacking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis3/courtStacking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vis3/lower_court_stacking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vis3/lower_court_stacking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vis3/vis3.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vis3/vis3.css" afterDir="false" />
@@ -15,17 +36,37 @@
       <change beforePath="$PROJECT_DIR$/Vis4/vis4.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vis4/vis4.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/justice_confirmations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/justice_confirmations.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Vis1/js/barchart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/js/barchart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis1/js/linegraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/js/linegraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis1/state_bias1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1/state_bias1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis1b/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1b/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vis1b/state_bias2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vis1b/state_bias2.html" afterDir="false" />
+>>>>>>> fd66221759a9ef17c29ae4fe0180633832cc1d49
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kg2N2vwO9nJYzcegR15UB5KcBz" />
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+>>>>>>> fd66221759a9ef17c29ae4fe0180633832cc1d49
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,7 +76,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+<<<<<<< HEAD
     <property name="node.js.detected.package.tslint" value="true" />
+=======
+>>>>>>> fd66221759a9ef17c29ae4fe0180633832cc1d49
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -44,11 +88,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Vis1/js" />
+      <recent name="C:\Users\avizs\Desktop\Dropbox\Senior Year\CS 171\CS171_Final\data" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,18 +111,40 @@
       <workItem from="1606947299083" duration="17000" />
       <workItem from="1607031974981" duration="6946000" />
       <workItem from="1607048723204" duration="284000" />
+<<<<<<< HEAD
       <workItem from="1607197143217" duration="48789000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1607234774470" duration="680000" />
+      <workItem from="1607281043873" duration="2103000" />
+=======
+      <workItem from="1607235895275" duration="5171000" />
+>>>>>>> e2daaa9d0ac31269aeae234ce1a63de7dfd1dc3e
+>>>>>>> fd66221759a9ef17c29ae4fe0180633832cc1d49
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="142" y="0" key="SettingsEditor" timestamp="1607037322559">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607037322559" />
+<<<<<<< HEAD
     <state x="2383" y="447" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607283921238">
       <screen x="1680" y="23" width="2560" height="1057" />
     </state>
@@ -92,5 +159,11 @@
     </state>
     <state x="304" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606946380839" />
     <state x="2288" y="28" width="1344" height="1054" key="search.everywhere.popup/1680.23.2560.1057/0.23.1680.976@1680.23.2560.1057" timestamp="1607278753226" />
+=======
+    <state x="306" y="5" width="672" height="678" key="search.everywhere.popup" timestamp="1607282503860">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="306" y="5" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607282503860" />
+>>>>>>> fd66221759a9ef17c29ae4fe0180633832cc1d49
   </component>
 </project>
