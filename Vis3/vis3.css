@@ -5,7 +5,7 @@
 .dot-bar-fraction {
     font-size: 3VH;
     font-weight: bold;
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
 }
 
 .vis-3-year {
@@ -14,7 +14,7 @@
 
 .vis-3-y-label {
     font-size: 18px;
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
 }
 
 body {

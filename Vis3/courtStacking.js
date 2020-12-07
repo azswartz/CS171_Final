@@ -208,12 +208,12 @@ class CourtStacking {
             .attr('y', lh * 2 + vis.prty_h/4 + 9)
             .style('dominant-baseline', 'central')
             .attr('class', 'leg-text')
-            .text('Presidential elections');
+            .text('Presidential election');
 
         vis.legend.append('circle')
             .attr('cx', lw/2)
             .attr('cy', lh * 2 + vis.prty_h/2 + 18 + vis.dot_r)
-            .attr('r', vis.dot_r)
+            .attr('r', vis.dot_r*3)
             .style('fill', 'lightgrey');
         vis.legend.append('text')
             .attr('x', lw + 4)
@@ -224,7 +224,7 @@ class CourtStacking {
         vis.legend.append('circle')
             .attr('cx', lw/2)
             .attr('cy', lh * 3 + vis.prty_h/2 + 18 + 2*vis.dot_r)
-            .attr('r', vis.dot_r)
+            .attr('r', vis.dot_r*3)
             .style('fill', 'darkseagreen');
 
         vis.legend.append('text')

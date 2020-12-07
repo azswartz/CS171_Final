@@ -1,5 +1,5 @@
 .timeline-year {
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
     font-size: 20px;
     font-weight: bold;
 }
@@ -95,7 +95,7 @@ label {
 }
 
 .tooltip-1 {
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";*/
     font-size: 19px;
     font-weight: bold;
 }

@@ -17,7 +17,7 @@ class HearingsTimeline {
 
         vis.margin = {
             top: parentHeight*0.19,
-            right: parentWidth*0.1,
+            right: parentWidth*0.13,
             bottom: parentHeight*0,
             left: parentWidth*0.12};
         vis.width = parentWidth - vis.margin.left - vis.margin.right;
@@ -58,7 +58,7 @@ class HearingsTimeline {
             .attr('class', 'desc-grp')
 
         vis.descGroupHear.append('text')
-            .text('Confirmation')
+            .text('Final Vote')
             .attr('x', 0)
             .attr('y', 0)
             .attr('class', 'desc');
@@ -72,7 +72,7 @@ class HearingsTimeline {
             .attr('class', 'desc-grp');
 
         vis.descGroupDays.append('text')
-            .text('Days between the confirmation')
+            .text('Days between confirmation')
             .attr('x', 0).attr('y', 0)
             .attr('class', 'desc');
         vis.descGroupDays.append('text')
@@ -398,7 +398,7 @@ class HearingsTimeline {
             .attr('y', election_rect_h/2)
             .style('font-size', 12)
             .style('dominant-baseline', 'middle')
-            .text('Presidential elections');
+            .text('Presidential election');
 
 
 
